@@ -28,242 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvDetail = new System.Windows.Forms.DataGridView();
             this.gbAddNewStaff = new System.Windows.Forms.GroupBox();
             this.btnAddNewStaff = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnDeleteStaff = new System.Windows.Forms.Button();
+            this.txtFullname = new System.Windows.Forms.TextBox();
+            this.lbFullname = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.lbPermission = new System.Windows.Forms.Label();
+            this.cbCashing = new System.Windows.Forms.CheckBox();
+            this.cbCreateReport = new System.Windows.Forms.CheckBox();
+            this.cbImport = new System.Windows.Forms.CheckBox();
+            this.txtRetypePass = new System.Windows.Forms.TextBox();
+            this.lbRetype = new System.Windows.Forms.Label();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.dgvDetail = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbNewPass = new System.Windows.Forms.Label();
+            this.btnDeleteStaff = new System.Windows.Forms.Button();
+            this.txtDOB = new System.Windows.Forms.TextBox();
+            this.lbDOB = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.lbPhone = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lbAddress = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.gbAddNewStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
+            this.gbAddNewStaff.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dgvDetail);
             this.panel1.Location = new System.Drawing.Point(331, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(695, 601);
+            this.panel1.Size = new System.Drawing.Size(695, 634);
             this.panel1.TabIndex = 0;
-            // 
-            // gbAddNewStaff
-            // 
-            this.gbAddNewStaff.Controls.Add(this.btnAddNewStaff);
-            this.gbAddNewStaff.Controls.Add(this.textBox5);
-            this.gbAddNewStaff.Controls.Add(this.label3);
-            this.gbAddNewStaff.Controls.Add(this.textBox6);
-            this.gbAddNewStaff.Controls.Add(this.label4);
-            this.gbAddNewStaff.Controls.Add(this.label5);
-            this.gbAddNewStaff.Controls.Add(this.checkBox4);
-            this.gbAddNewStaff.Controls.Add(this.checkBox5);
-            this.gbAddNewStaff.Controls.Add(this.checkBox6);
-            this.gbAddNewStaff.Controls.Add(this.textBox7);
-            this.gbAddNewStaff.Controls.Add(this.label6);
-            this.gbAddNewStaff.Controls.Add(this.textBox8);
-            this.gbAddNewStaff.Controls.Add(this.btnUpdate);
-            this.gbAddNewStaff.Controls.Add(this.label7);
-            this.gbAddNewStaff.Controls.Add(this.btnDeleteStaff);
-            this.gbAddNewStaff.Location = new System.Drawing.Point(13, 13);
-            this.gbAddNewStaff.Name = "gbAddNewStaff";
-            this.gbAddNewStaff.Size = new System.Drawing.Size(300, 600);
-            this.gbAddNewStaff.TabIndex = 1;
-            this.gbAddNewStaff.TabStop = false;
-            this.gbAddNewStaff.Text = "New Staff";
-            // 
-            // btnAddNewStaff
-            // 
-            this.btnAddNewStaff.Location = new System.Drawing.Point(194, 540);
-            this.btnAddNewStaff.Name = "btnAddNewStaff";
-            this.btnAddNewStaff.Size = new System.Drawing.Size(75, 23);
-            this.btnAddNewStaff.TabIndex = 27;
-            this.btnAddNewStaff.Text = "Add";
-            this.btnAddNewStaff.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(23, 82);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 20);
-            this.textBox5.TabIndex = 26;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Full Name";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(23, 40);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 20);
-            this.textBox6.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Username";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Permissions";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(23, 265);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(104, 17);
-            this.checkBox4.TabIndex = 21;
-            this.checkBox4.Text = "Cashing (Selling)";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(23, 242);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(92, 17);
-            this.checkBox5.TabIndex = 20;
-            this.checkBox5.Text = "Create Report";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(23, 220);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(100, 17);
-            this.checkBox6.TabIndex = 19;
-            this.checkBox6.Text = "Import Products";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(23, 162);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 20);
-            this.textBox7.TabIndex = 18;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 146);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Repeat New Password";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(23, 120);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(121, 20);
-            this.textBox8.TabIndex = 16;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 104);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "New Password";
-            // 
-            // btnDeleteStaff
-            // 
-            this.btnDeleteStaff.Location = new System.Drawing.Point(113, 540);
-            this.btnDeleteStaff.Name = "btnDeleteStaff";
-            this.btnDeleteStaff.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteStaff.TabIndex = 0;
-            this.btnDeleteStaff.Text = "Delete";
-            this.btnDeleteStaff.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(21, 540);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // dgvDetail
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.productCode,
-            this.productName,
-            this.Unit,
-            this.quantity,
-            this.price,
-            this.note});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDetail.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvDetail.Location = new System.Drawing.Point(0, 0);
             this.dgvDetail.Name = "dgvDetail";
             this.dgvDetail.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.dgvDetail.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.dgvDetail.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDetail.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.dgvDetail.RowTemplate.Height = 35;
             this.dgvDetail.RowTemplate.ReadOnly = true;
@@ -271,52 +124,284 @@
             this.dgvDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDetail.Size = new System.Drawing.Size(695, 601);
             this.dgvDetail.TabIndex = 3;
+            this.dgvDetail.SizeChanged += new System.EventHandler(this.dgvDetail_SizeChanged);
             // 
-            // id
+            // gbAddNewStaff
             // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
+            this.gbAddNewStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gbAddNewStaff.Controls.Add(this.txtAddress);
+            this.gbAddNewStaff.Controls.Add(this.lbAddress);
+            this.gbAddNewStaff.Controls.Add(this.txtPhone);
+            this.gbAddNewStaff.Controls.Add(this.lbPhone);
+            this.gbAddNewStaff.Controls.Add(this.txtDOB);
+            this.gbAddNewStaff.Controls.Add(this.lbDOB);
+            this.gbAddNewStaff.Controls.Add(this.btnAddNewStaff);
+            this.gbAddNewStaff.Controls.Add(this.txtFullname);
+            this.gbAddNewStaff.Controls.Add(this.lbFullname);
+            this.gbAddNewStaff.Controls.Add(this.txtUsername);
+            this.gbAddNewStaff.Controls.Add(this.lbUsername);
+            this.gbAddNewStaff.Controls.Add(this.lbPermission);
+            this.gbAddNewStaff.Controls.Add(this.cbCashing);
+            this.gbAddNewStaff.Controls.Add(this.cbCreateReport);
+            this.gbAddNewStaff.Controls.Add(this.cbImport);
+            this.gbAddNewStaff.Controls.Add(this.txtRetypePass);
+            this.gbAddNewStaff.Controls.Add(this.lbRetype);
+            this.gbAddNewStaff.Controls.Add(this.txtNewPass);
+            this.gbAddNewStaff.Controls.Add(this.btnUpdate);
+            this.gbAddNewStaff.Controls.Add(this.lbNewPass);
+            this.gbAddNewStaff.Controls.Add(this.btnDeleteStaff);
+            this.gbAddNewStaff.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.gbAddNewStaff.Location = new System.Drawing.Point(13, 13);
+            this.gbAddNewStaff.Name = "gbAddNewStaff";
+            this.gbAddNewStaff.Size = new System.Drawing.Size(300, 633);
+            this.gbAddNewStaff.TabIndex = 1;
+            this.gbAddNewStaff.TabStop = false;
+            this.gbAddNewStaff.Text = "New Staff";
             // 
-            // productCode
+            // btnAddNewStaff
             // 
-            this.productCode.HeaderText = "Code";
-            this.productCode.Name = "productCode";
+            this.btnAddNewStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddNewStaff.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.btnAddNewStaff.Location = new System.Drawing.Point(200, 571);
+            this.btnAddNewStaff.Name = "btnAddNewStaff";
+            this.btnAddNewStaff.Size = new System.Drawing.Size(75, 36);
+            this.btnAddNewStaff.TabIndex = 27;
+            this.btnAddNewStaff.Text = "Add";
+            this.btnAddNewStaff.UseVisualStyleBackColor = true;
             // 
-            // productName
+            // txtFullname
             // 
-            this.productName.HeaderText = "Name";
-            this.productName.Name = "productName";
+            this.txtFullname.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtFullname.Location = new System.Drawing.Point(23, 119);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.Size = new System.Drawing.Size(210, 26);
+            this.txtFullname.TabIndex = 26;
             // 
-            // Unit
+            // lbFullname
             // 
-            this.Unit.HeaderText = "Unit";
-            this.Unit.Name = "Unit";
+            this.lbFullname.AutoSize = true;
+            this.lbFullname.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbFullname.Location = new System.Drawing.Point(23, 97);
+            this.lbFullname.Name = "lbFullname";
+            this.lbFullname.Size = new System.Drawing.Size(70, 19);
+            this.lbFullname.TabIndex = 25;
+            this.lbFullname.Text = "Full Name";
             // 
-            // quantity
+            // txtUsername
             // 
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtUsername.Location = new System.Drawing.Point(23, 68);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(210, 26);
+            this.txtUsername.TabIndex = 24;
             // 
-            // price
+            // lbUsername
             // 
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbUsername.Location = new System.Drawing.Point(23, 46);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(71, 19);
+            this.lbUsername.TabIndex = 23;
+            this.lbUsername.Text = "Username";
             // 
-            // note
+            // lbPermission
             // 
-            this.note.HeaderText = "Note";
-            this.note.Name = "note";
+            this.lbPermission.AutoSize = true;
+            this.lbPermission.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbPermission.Location = new System.Drawing.Point(20, 436);
+            this.lbPermission.Name = "lbPermission";
+            this.lbPermission.Size = new System.Drawing.Size(81, 19);
+            this.lbPermission.TabIndex = 22;
+            this.lbPermission.Text = "Permissions";
+            // 
+            // cbCashing
+            // 
+            this.cbCashing.AutoSize = true;
+            this.cbCashing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCashing.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.cbCashing.Location = new System.Drawing.Point(23, 529);
+            this.cbCashing.Name = "cbCashing";
+            this.cbCashing.Size = new System.Drawing.Size(125, 23);
+            this.cbCashing.TabIndex = 21;
+            this.cbCashing.Text = "Cashing (Selling)";
+            this.cbCashing.UseVisualStyleBackColor = true;
+            // 
+            // cbCreateReport
+            // 
+            this.cbCreateReport.AutoSize = true;
+            this.cbCreateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCreateReport.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.cbCreateReport.Location = new System.Drawing.Point(23, 495);
+            this.cbCreateReport.Name = "cbCreateReport";
+            this.cbCreateReport.Size = new System.Drawing.Size(110, 23);
+            this.cbCreateReport.TabIndex = 20;
+            this.cbCreateReport.Text = "Create Report";
+            this.cbCreateReport.UseVisualStyleBackColor = true;
+            // 
+            // cbImport
+            // 
+            this.cbImport.AutoSize = true;
+            this.cbImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbImport.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.cbImport.Location = new System.Drawing.Point(23, 461);
+            this.cbImport.Name = "cbImport";
+            this.cbImport.Size = new System.Drawing.Size(125, 23);
+            this.cbImport.TabIndex = 19;
+            this.cbImport.Text = "Import Products";
+            this.cbImport.UseVisualStyleBackColor = true;
+            // 
+            // txtRetypePass
+            // 
+            this.txtRetypePass.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtRetypePass.Location = new System.Drawing.Point(23, 221);
+            this.txtRetypePass.Name = "txtRetypePass";
+            this.txtRetypePass.Size = new System.Drawing.Size(210, 26);
+            this.txtRetypePass.TabIndex = 18;
+            this.txtRetypePass.UseSystemPasswordChar = true;
+            // 
+            // lbRetype
+            // 
+            this.lbRetype.AutoSize = true;
+            this.lbRetype.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbRetype.Location = new System.Drawing.Point(23, 199);
+            this.lbRetype.Name = "lbRetype";
+            this.lbRetype.Size = new System.Drawing.Size(113, 19);
+            this.lbRetype.TabIndex = 17;
+            this.lbRetype.Text = "Repeat Password";
+            // 
+            // txtNewPass
+            // 
+            this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtNewPass.Location = new System.Drawing.Point(23, 170);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(210, 26);
+            this.txtNewPass.TabIndex = 16;
+            this.txtNewPass.UseSystemPasswordChar = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.btnUpdate.Location = new System.Drawing.Point(16, 571);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 36);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // lbNewPass
+            // 
+            this.lbNewPass.AutoSize = true;
+            this.lbNewPass.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbNewPass.Location = new System.Drawing.Point(23, 148);
+            this.lbNewPass.Name = "lbNewPass";
+            this.lbNewPass.Size = new System.Drawing.Size(98, 19);
+            this.lbNewPass.TabIndex = 15;
+            this.lbNewPass.Text = "New Password";
+            // 
+            // btnDeleteStaff
+            // 
+            this.btnDeleteStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteStaff.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.btnDeleteStaff.Location = new System.Drawing.Point(108, 571);
+            this.btnDeleteStaff.Name = "btnDeleteStaff";
+            this.btnDeleteStaff.Size = new System.Drawing.Size(75, 36);
+            this.btnDeleteStaff.TabIndex = 0;
+            this.btnDeleteStaff.Text = "Delete";
+            this.btnDeleteStaff.UseVisualStyleBackColor = true;
+            // 
+            // txtDOB
+            // 
+            this.txtDOB.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtDOB.Location = new System.Drawing.Point(23, 272);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.Size = new System.Drawing.Size(210, 26);
+            this.txtDOB.TabIndex = 29;
+            // 
+            // lbDOB
+            // 
+            this.lbDOB.AutoSize = true;
+            this.lbDOB.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbDOB.Location = new System.Drawing.Point(23, 250);
+            this.lbDOB.Name = "lbDOB";
+            this.lbDOB.Size = new System.Drawing.Size(90, 19);
+            this.lbDOB.TabIndex = 28;
+            this.lbDOB.Text = "Date Of Birth";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtPhone.Location = new System.Drawing.Point(23, 323);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(210, 26);
+            this.txtPhone.TabIndex = 31;
+            // 
+            // lbPhone
+            // 
+            this.lbPhone.AutoSize = true;
+            this.lbPhone.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbPhone.Location = new System.Drawing.Point(23, 301);
+            this.lbPhone.Name = "lbPhone";
+            this.lbPhone.Size = new System.Drawing.Size(48, 19);
+            this.lbPhone.TabIndex = 30;
+            this.lbPhone.Text = "Phone";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Username";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "BOB";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Permissions";
+            this.Column5.Name = "Column5";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtAddress.Location = new System.Drawing.Point(23, 374);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(210, 26);
+            this.txtAddress.TabIndex = 33;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbAddress.Location = new System.Drawing.Point(23, 352);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(58, 19);
+            this.lbAddress.TabIndex = 32;
+            this.lbAddress.Text = "Address";
             // 
             // frmStaffManagement
             // 
-            this.ClientSize = new System.Drawing.Size(1038, 625);
+            this.ClientSize = new System.Drawing.Size(1038, 658);
             this.Controls.Add(this.gbAddNewStaff);
             this.Controls.Add(this.panel1);
             this.Name = "frmStaffManagement";
+            this.Load += new System.EventHandler(this.frmStaffManagement_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
             this.gbAddNewStaff.ResumeLayout(false);
             this.gbAddNewStaff.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,25 +413,29 @@
         private System.Windows.Forms.Button btnDeleteStaff;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAddNewStaff;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtFullname;
+        private System.Windows.Forms.Label lbFullname;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lbUsername;
+        private System.Windows.Forms.Label lbPermission;
+        private System.Windows.Forms.CheckBox cbCashing;
+        private System.Windows.Forms.CheckBox cbCreateReport;
+        private System.Windows.Forms.CheckBox cbImport;
+        private System.Windows.Forms.TextBox txtRetypePass;
+        private System.Windows.Forms.Label lbRetype;
+        private System.Windows.Forms.TextBox txtNewPass;
+        private System.Windows.Forms.Label lbNewPass;
         private System.Windows.Forms.DataGridView dgvDetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn note;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label lbAddress;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Label lbPhone;
+        private System.Windows.Forms.TextBox txtDOB;
+        private System.Windows.Forms.Label lbDOB;
     }
 }

@@ -29,7 +29,7 @@ namespace Shopping_Management
         public frmWelcome()
         {
             InitializeComponent();
-            MessageBox.Show(Language.GetStringMessage(false, "frmWelcome_txtWelcome"));
+           // MessageBox.Show(Language.GetStringMessage(false, "frmWelcome_txtWelcome"));
             picLogin.BackColor = Color.Transparent;
             lbLanguage.BackColor = Color.Transparent;
             cbLanguage.SelectedIndex = 0;
