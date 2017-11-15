@@ -15,7 +15,7 @@ namespace Shopping_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStaffManagement());
+            Application.Run(new frmHistory(true));
         }
     }
 }
