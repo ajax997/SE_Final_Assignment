@@ -8,7 +8,7 @@ namespace Shopping_Management
 {
     class UserLogin
     {
-        public string username
+        public int staff_id
         {
             get; set;
         }
@@ -41,9 +41,9 @@ namespace Shopping_Management
             get;set;
         }
 
-        public UserLogin(string username, string password, string fullname, string dOB, string phone, string address, int admin, string permission)
+        public UserLogin(int staff_id, string password, string fullname, string dOB, string phone, string address, int admin)
         {
-            this.username = username;
+            this.staff_id = staff_id;
             this.password = password;
             this.fullname = fullname;
             DOB = dOB;

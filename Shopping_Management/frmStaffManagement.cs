@@ -85,5 +85,10 @@ namespace Shopping_Management
         {
             authentication.Close();
         }
+
+        private void lbAddress_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
