@@ -20,6 +20,10 @@ namespace Shopping_Management
         {
             get; set;
         }
+        public int sex
+        {
+            get; set;
+        }
         public string DOB
         {
             get; set;
@@ -41,16 +45,18 @@ namespace Shopping_Management
             get;set;
         }
 
-        public UserLogin(int staff_id, string password, string fullname, string dOB, string phone, string address, int admin)
+
+        public UserLogin(int staff_id, string password, string fullname, int sex, string DOB, string phone, string address, int admin)
         {
             this.staff_id = staff_id;
             this.password = password;
             this.fullname = fullname;
-            DOB = dOB;
+            this.sex = sex;
+            this.DOB = DOB;
             this.phone = phone;
             this.address = address;
             this.admin = admin;
-            this.permission = permission;
+           
         }
     }
 }

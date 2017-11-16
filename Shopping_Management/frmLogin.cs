@@ -25,6 +25,8 @@ namespace Shopping_Management
          );
 
         bool _en;
+
+        AuthenticationHelper authentication = new AuthenticationHelper();
         public frmLogin(bool en)
         {
             InitializeComponent();
@@ -75,9 +77,24 @@ namespace Shopping_Management
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            frmDashboard frm = new frmDashboard(_en);
-            frm.Show();
+            if (authentication.CheckLogin(int.Parse(txtUsername.Text), txtPassword.Text) == 1)
+            {
+                frmDashboard frm = new frmDashboard(_en, true);
+                frm.Show();
+
+            }
+            else
+            {
+                if (authentication.CheckLogin(int.Parse(txtUsername.Text), txtPassword.Text) == 0)
+                {
+                    frmDashboard frm = new frmDashboard(_en, false);
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("User ID or password is invalid, please check or contact the admin to slove!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnLogin = new System.Windows.Forms.Button();
             this.lbLogin = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.lbPassword = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbUser = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -68,14 +68,14 @@
             this.lbLogin.TabIndex = 1;
             this.lbLogin.Text = "Login";
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(128, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtUsername.Location = new System.Drawing.Point(128, 178);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(183, 26);
+            this.txtUsername.TabIndex = 0;
             // 
             // lbPassword
             // 
@@ -87,15 +87,15 @@
             this.lbPassword.TabIndex = 1;
             this.lbPassword.Text = "Password";
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.textBox2.Location = new System.Drawing.Point(128, 223);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 26);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtPassword.Location = new System.Drawing.Point(128, 223);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(183, 26);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
@@ -113,9 +113,9 @@
             this.lbUser.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.lbUser.Location = new System.Drawing.Point(39, 180);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(71, 19);
+            this.lbUser.Size = new System.Drawing.Size(50, 19);
             this.lbUser.TabIndex = 1;
-            this.lbUser.Text = "Username";
+            this.lbUser.Text = "Use ID";
             // 
             // btnCancel
             // 
@@ -157,10 +157,10 @@
             this.ClientSize = new System.Drawing.Size(356, 427);
             this.Controls.Add(this.pnWarning);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.lbPassword);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lbLogin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
@@ -187,9 +187,9 @@
 
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lbLogin;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.Button btnCancel;

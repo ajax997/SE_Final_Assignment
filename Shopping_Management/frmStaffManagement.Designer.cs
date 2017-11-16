@@ -34,11 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDetail = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAddNewStaff = new System.Windows.Forms.GroupBox();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -51,16 +46,20 @@
             this.lbFullname = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lbUsername = new System.Windows.Forms.Label();
-            this.lbPermission = new System.Windows.Forms.Label();
-            this.cbCashing = new System.Windows.Forms.CheckBox();
-            this.cbCreateReport = new System.Windows.Forms.CheckBox();
-            this.cbImport = new System.Windows.Forms.CheckBox();
             this.txtRetypePass = new System.Windows.Forms.TextBox();
             this.lbRetype = new System.Windows.Forms.Label();
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lbNewPass = new System.Windows.Forms.Label();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbSex = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
             this.gbAddNewStaff.SuspendLayout();
@@ -98,9 +97,10 @@
             this.dgvDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.sex,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.address});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -126,35 +126,12 @@
             this.dgvDetail.TabIndex = 3;
             this.dgvDetail.SizeChanged += new System.EventHandler(this.dgvDetail_SizeChanged);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Username";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Full Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "BOB";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Phone";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Permissions";
-            this.Column5.Name = "Column5";
-            // 
             // gbAddNewStaff
             // 
             this.gbAddNewStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.gbAddNewStaff.Controls.Add(this.cbSex);
+            this.gbAddNewStaff.Controls.Add(this.label1);
             this.gbAddNewStaff.Controls.Add(this.dtpDOB);
             this.gbAddNewStaff.Controls.Add(this.txtAddress);
             this.gbAddNewStaff.Controls.Add(this.lbAddress);
@@ -166,10 +143,6 @@
             this.gbAddNewStaff.Controls.Add(this.lbFullname);
             this.gbAddNewStaff.Controls.Add(this.txtUsername);
             this.gbAddNewStaff.Controls.Add(this.lbUsername);
-            this.gbAddNewStaff.Controls.Add(this.lbPermission);
-            this.gbAddNewStaff.Controls.Add(this.cbCashing);
-            this.gbAddNewStaff.Controls.Add(this.cbCreateReport);
-            this.gbAddNewStaff.Controls.Add(this.cbImport);
             this.gbAddNewStaff.Controls.Add(this.txtRetypePass);
             this.gbAddNewStaff.Controls.Add(this.lbRetype);
             this.gbAddNewStaff.Controls.Add(this.txtNewPass);
@@ -186,24 +159,24 @@
             // 
             // dtpDOB
             // 
-            this.dtpDOB.Location = new System.Drawing.Point(23, 271);
+            this.dtpDOB.Location = new System.Drawing.Point(23, 340);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(210, 27);
+            this.dtpDOB.Size = new System.Drawing.Size(252, 27);
             this.dtpDOB.TabIndex = 34;
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txtAddress.Location = new System.Drawing.Point(23, 374);
+            this.txtAddress.Location = new System.Drawing.Point(23, 443);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(210, 26);
+            this.txtAddress.Size = new System.Drawing.Size(252, 26);
             this.txtAddress.TabIndex = 33;
             // 
             // lbAddress
             // 
             this.lbAddress.AutoSize = true;
             this.lbAddress.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.lbAddress.Location = new System.Drawing.Point(23, 352);
+            this.lbAddress.Location = new System.Drawing.Point(23, 421);
             this.lbAddress.Name = "lbAddress";
             this.lbAddress.Size = new System.Drawing.Size(58, 19);
             this.lbAddress.TabIndex = 32;
@@ -213,16 +186,16 @@
             // txtPhone
             // 
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txtPhone.Location = new System.Drawing.Point(23, 323);
+            this.txtPhone.Location = new System.Drawing.Point(23, 392);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(210, 26);
+            this.txtPhone.Size = new System.Drawing.Size(252, 26);
             this.txtPhone.TabIndex = 31;
             // 
             // lbPhone
             // 
             this.lbPhone.AutoSize = true;
             this.lbPhone.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.lbPhone.Location = new System.Drawing.Point(23, 301);
+            this.lbPhone.Location = new System.Drawing.Point(23, 370);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(48, 19);
             this.lbPhone.TabIndex = 30;
@@ -232,7 +205,7 @@
             // 
             this.lbDOB.AutoSize = true;
             this.lbDOB.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.lbDOB.Location = new System.Drawing.Point(23, 250);
+            this.lbDOB.Location = new System.Drawing.Point(23, 319);
             this.lbDOB.Name = "lbDOB";
             this.lbDOB.Size = new System.Drawing.Size(90, 19);
             this.lbDOB.TabIndex = 28;
@@ -255,7 +228,7 @@
             this.txtFullname.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.txtFullname.Location = new System.Drawing.Point(23, 119);
             this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Size = new System.Drawing.Size(210, 26);
+            this.txtFullname.Size = new System.Drawing.Size(252, 26);
             this.txtFullname.TabIndex = 26;
             // 
             // lbFullname
@@ -273,7 +246,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.txtUsername.Location = new System.Drawing.Point(23, 68);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(210, 26);
+            this.txtUsername.Size = new System.Drawing.Size(252, 26);
             this.txtUsername.TabIndex = 24;
             // 
             // lbUsername
@@ -286,58 +259,12 @@
             this.lbUsername.TabIndex = 23;
             this.lbUsername.Text = "Username";
             // 
-            // lbPermission
-            // 
-            this.lbPermission.AutoSize = true;
-            this.lbPermission.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.lbPermission.Location = new System.Drawing.Point(20, 436);
-            this.lbPermission.Name = "lbPermission";
-            this.lbPermission.Size = new System.Drawing.Size(81, 19);
-            this.lbPermission.TabIndex = 22;
-            this.lbPermission.Text = "Permissions";
-            // 
-            // cbCashing
-            // 
-            this.cbCashing.AutoSize = true;
-            this.cbCashing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCashing.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.cbCashing.Location = new System.Drawing.Point(23, 529);
-            this.cbCashing.Name = "cbCashing";
-            this.cbCashing.Size = new System.Drawing.Size(125, 23);
-            this.cbCashing.TabIndex = 21;
-            this.cbCashing.Text = "Cashing (Selling)";
-            this.cbCashing.UseVisualStyleBackColor = true;
-            // 
-            // cbCreateReport
-            // 
-            this.cbCreateReport.AutoSize = true;
-            this.cbCreateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCreateReport.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.cbCreateReport.Location = new System.Drawing.Point(23, 495);
-            this.cbCreateReport.Name = "cbCreateReport";
-            this.cbCreateReport.Size = new System.Drawing.Size(110, 23);
-            this.cbCreateReport.TabIndex = 20;
-            this.cbCreateReport.Text = "Create Report";
-            this.cbCreateReport.UseVisualStyleBackColor = true;
-            // 
-            // cbImport
-            // 
-            this.cbImport.AutoSize = true;
-            this.cbImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbImport.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.cbImport.Location = new System.Drawing.Point(23, 461);
-            this.cbImport.Name = "cbImport";
-            this.cbImport.Size = new System.Drawing.Size(125, 23);
-            this.cbImport.TabIndex = 19;
-            this.cbImport.Text = "Import Products";
-            this.cbImport.UseVisualStyleBackColor = true;
-            // 
             // txtRetypePass
             // 
             this.txtRetypePass.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.txtRetypePass.Location = new System.Drawing.Point(23, 221);
             this.txtRetypePass.Name = "txtRetypePass";
-            this.txtRetypePass.Size = new System.Drawing.Size(210, 26);
+            this.txtRetypePass.Size = new System.Drawing.Size(252, 26);
             this.txtRetypePass.TabIndex = 18;
             this.txtRetypePass.UseSystemPasswordChar = true;
             // 
@@ -356,7 +283,7 @@
             this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.txtNewPass.Location = new System.Drawing.Point(23, 170);
             this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.Size = new System.Drawing.Size(210, 26);
+            this.txtNewPass.Size = new System.Drawing.Size(252, 26);
             this.txtNewPass.TabIndex = 16;
             this.txtNewPass.UseSystemPasswordChar = true;
             // 
@@ -392,6 +319,57 @@
             this.btnDeleteStaff.Text = "Delete";
             this.btnDeleteStaff.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.label1.Location = new System.Drawing.Point(23, 255);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 19);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Sex";
+            // 
+            // cbSex
+            // 
+            this.cbSex.FormattingEnabled = true;
+            this.cbSex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbSex.Location = new System.Drawing.Point(27, 277);
+            this.cbSex.Name = "cbSex";
+            this.cbSex.Size = new System.Drawing.Size(248, 28);
+            this.cbSex.TabIndex = 36;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Username";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.Name = "Column2";
+            // 
+            // sex
+            // 
+            this.sex.HeaderText = "Sex";
+            this.sex.Name = "sex";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "BOB";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone";
+            this.Column4.Name = "Column4";
+            // 
+            // address
+            // 
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            // 
             // frmStaffManagement
             // 
             this.ClientSize = new System.Drawing.Size(1038, 658);
@@ -419,25 +397,24 @@
         private System.Windows.Forms.Label lbFullname;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lbUsername;
-        private System.Windows.Forms.Label lbPermission;
-        private System.Windows.Forms.CheckBox cbCashing;
-        private System.Windows.Forms.CheckBox cbCreateReport;
-        private System.Windows.Forms.CheckBox cbImport;
         private System.Windows.Forms.TextBox txtRetypePass;
         private System.Windows.Forms.Label lbRetype;
         private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label lbNewPass;
         private System.Windows.Forms.DataGridView dgvDetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lbAddress;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lbPhone;
         private System.Windows.Forms.Label lbDOB;
         private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.ComboBox cbSex;
+        private System.Windows.Forms.Label label1;
     }
 }

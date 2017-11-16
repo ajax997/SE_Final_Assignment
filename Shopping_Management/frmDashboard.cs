@@ -14,7 +14,7 @@ namespace Shopping_Management
     public partial class frmDashboard : Form
     {
         private bool en;
-        public frmDashboard(bool en)
+        public frmDashboard(bool en, bool admin)
         {
            
             InitializeComponent();
