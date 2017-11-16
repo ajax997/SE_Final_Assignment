@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbInformation = new System.Windows.Forms.GroupBox();
+            this.dtpExpiredDate = new System.Windows.Forms.DateTimePicker();
+            this.lbExpiredDate = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.lbPrice = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,9 +58,8 @@
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.lbPrice = new System.Windows.Forms.Label();
             this.gbInformation.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
@@ -66,6 +69,8 @@
             // 
             this.gbInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.gbInformation.Controls.Add(this.dtpExpiredDate);
+            this.gbInformation.Controls.Add(this.lbExpiredDate);
             this.gbInformation.Controls.Add(this.txtPrice);
             this.gbInformation.Controls.Add(this.lbPrice);
             this.gbInformation.Controls.Add(this.button3);
@@ -84,16 +89,51 @@
             this.gbInformation.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.gbInformation.Location = new System.Drawing.Point(18, 20);
             this.gbInformation.Name = "gbInformation";
-            this.gbInformation.Size = new System.Drawing.Size(284, 550);
+            this.gbInformation.Size = new System.Drawing.Size(284, 599);
             this.gbInformation.TabIndex = 0;
             this.gbInformation.TabStop = false;
             this.gbInformation.Text = "Informations";
+            // 
+            // dtpExpiredDate
+            // 
+            this.dtpExpiredDate.Location = new System.Drawing.Point(25, 389);
+            this.dtpExpiredDate.Name = "dtpExpiredDate";
+            this.dtpExpiredDate.Size = new System.Drawing.Size(200, 24);
+            this.dtpExpiredDate.TabIndex = 8;
+            // 
+            // lbExpiredDate
+            // 
+            this.lbExpiredDate.AutoSize = true;
+            this.lbExpiredDate.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.lbExpiredDate.Location = new System.Drawing.Point(24, 369);
+            this.lbExpiredDate.Name = "lbExpiredDate";
+            this.lbExpiredDate.Size = new System.Drawing.Size(83, 17);
+            this.lbExpiredDate.TabIndex = 6;
+            this.lbExpiredDate.Text = "Expired Date";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtPrice.Location = new System.Drawing.Point(27, 318);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(206, 24);
+            this.txtPrice.TabIndex = 5;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.lbPrice.Location = new System.Drawing.Point(24, 292);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(36, 17);
+            this.lbPrice.TabIndex = 4;
+            this.lbPrice.Text = "Price";
             // 
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.button3.Location = new System.Drawing.Point(39, 498);
+            this.button3.Location = new System.Drawing.Point(37, 554);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 30);
             this.button3.TabIndex = 3;
@@ -104,7 +144,7 @@
             // 
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btnAdd.Location = new System.Drawing.Point(96, 458);
+            this.btnAdd.Location = new System.Drawing.Point(94, 517);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(88, 30);
             this.btnAdd.TabIndex = 3;
@@ -116,7 +156,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.button1.Location = new System.Drawing.Point(143, 498);
+            this.button1.Location = new System.Drawing.Point(141, 554);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 30);
             this.button1.TabIndex = 3;
@@ -143,7 +183,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.textBox4.Location = new System.Drawing.Point(27, 386);
+            this.textBox4.Location = new System.Drawing.Point(25, 449);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(206, 52);
@@ -163,7 +203,7 @@
             // 
             this.lbNote.AutoSize = true;
             this.lbNote.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.lbNote.Location = new System.Drawing.Point(26, 357);
+            this.lbNote.Location = new System.Drawing.Point(22, 429);
             this.lbNote.Name = "lbNote";
             this.lbNote.Size = new System.Drawing.Size(37, 17);
             this.lbNote.TabIndex = 0;
@@ -223,23 +263,23 @@
             this.panel1.Controls.Add(this.dgvDetail);
             this.panel1.Location = new System.Drawing.Point(318, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(721, 541);
+            this.panel1.Size = new System.Drawing.Size(721, 590);
             this.panel1.TabIndex = 1;
             // 
             // dgvDetail
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -248,30 +288,31 @@
             this.Unit,
             this.quantity,
             this.price,
+            this.expiredDate,
             this.note});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDetail.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvDetail.Location = new System.Drawing.Point(0, 0);
             this.dgvDetail.Name = "dgvDetail";
             this.dgvDetail.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.dgvDetail.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.dgvDetail.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDetail.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.dgvDetail.RowTemplate.Height = 35;
             this.dgvDetail.RowTemplate.ReadOnly = true;
             this.dgvDetail.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvDetail.Size = new System.Drawing.Size(721, 541);
+            this.dgvDetail.Size = new System.Drawing.Size(721, 590);
             this.dgvDetail.TabIndex = 2;
             // 
             // id
@@ -304,34 +345,21 @@
             this.price.HeaderText = "Price";
             this.price.Name = "price";
             // 
+            // expiredDate
+            // 
+            this.expiredDate.HeaderText = "Expired Date";
+            this.expiredDate.Name = "expiredDate";
+            // 
             // note
             // 
             this.note.HeaderText = "Note";
             this.note.Name = "note";
             // 
-            // txtPrice
-            // 
-            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtPrice.Location = new System.Drawing.Point(27, 318);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(206, 24);
-            this.txtPrice.TabIndex = 5;
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.lbPrice.Location = new System.Drawing.Point(24, 292);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(36, 17);
-            this.lbPrice.TabIndex = 4;
-            this.lbPrice.Text = "Price";
-            // 
             // frmImportProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 606);
+            this.ClientSize = new System.Drawing.Size(1060, 631);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbInformation);
             this.Name = "frmImportProducts";
@@ -361,17 +389,20 @@
         private System.Windows.Forms.DataGridView dgvDetail;
         private System.Windows.Forms.TextBox txtquantity;
         private System.Windows.Forms.Label lbQuantity;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Label lbExpiredDate;
+        private System.Windows.Forms.DateTimePicker dtpExpiredDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn productCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expiredDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn note;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label lbPrice;
     }
 }

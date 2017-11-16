@@ -10,9 +10,11 @@ namespace Shopping_Management
 {
     public partial class frmStaffManagement: Form
     {
-        public frmStaffManagement()
+        AuthenticationHelper authentication;
+        public frmStaffManagement(bool en)
         {
             InitializeComponent();
+           authentication  = new AuthenticationHelper();
         }
 
         public void DataGirdViewResize()
@@ -48,6 +50,40 @@ namespace Shopping_Management
         private void frmStaffManagement_Load(object sender, EventArgs e)
         {
             this.Height += 1;
+
+        }
+
+        private void btnAddNewStaff_Click(object sender, EventArgs e)
+        {
+            AuthenticationHelper authentication = new AuthenticationHelper();
+            string permission = "";
+
+            if (cbImport.Checked)
+                permission += "1";
+            else
+                permission += "0";
+
+            if (cbCreateReport.Checked)
+                permission += "1";
+            else
+                permission += "0";
+
+            if (cbCashing.Checked)
+                permission += "1";
+            else
+                permission += "0";
+
+            UserLogin user = new UserLogin(txtUsername.Text, Encryption.sha256(txtNewPass.Text), txtFullname.Text, dtpDOB.Value.ToShortDateString(), txtPhone.Text, txtAddress.Text, 1, permission);
+            if (authentication.InsertUser(user))
+            {
+                MessageBox.Show("Insert User Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+         }
+
+        private void frmStaffManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            authentication.Close();
         }
     }
 }

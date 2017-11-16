@@ -128,7 +128,7 @@ namespace Shopping_Management
 
         private void picStaffManagement_Click(object sender, EventArgs e)
         {
-            frmStaffManagement frmStaff = new frmStaffManagement();
+            frmStaffManagement frmStaff = new frmStaffManagement(en);
             frmStaff.Show();
         }
     }

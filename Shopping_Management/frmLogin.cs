@@ -82,7 +82,7 @@ namespace Shopping_Management
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            DataInteractive.TryConnect();
+           
             this.BackColor = Color.FromArgb(18, 115, 170);
             pnWarning.BackColor = Color.FromArgb(204, 51, 0);
         }

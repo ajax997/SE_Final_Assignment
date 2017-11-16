@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDetail = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAddNewStaff = new System.Windows.Forms.GroupBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.lbPhone = new System.Windows.Forms.Label();
+            this.lbDOB = new System.Windows.Forms.Label();
             this.btnAddNewStaff = new System.Windows.Forms.Button();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.lbFullname = new System.Windows.Forms.Label();
@@ -50,17 +60,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lbNewPass = new System.Windows.Forms.Label();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
-            this.txtDOB = new System.Windows.Forms.TextBox();
-            this.lbDOB = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.lbPhone = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.lbAddress = new System.Windows.Forms.Label();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
             this.gbAddNewStaff.SuspendLayout();
@@ -79,21 +79,21 @@
             // 
             // dgvDetail
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -101,22 +101,22 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDetail.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvDetail.Location = new System.Drawing.Point(0, 0);
             this.dgvDetail.Name = "dgvDetail";
             this.dgvDetail.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.dgvDetail.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.dgvDetail.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDetail.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.dgvDetail.RowTemplate.Height = 35;
             this.dgvDetail.RowTemplate.ReadOnly = true;
@@ -126,15 +126,40 @@
             this.dgvDetail.TabIndex = 3;
             this.dgvDetail.SizeChanged += new System.EventHandler(this.dgvDetail_SizeChanged);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Username";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "BOB";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Permissions";
+            this.Column5.Name = "Column5";
+            // 
             // gbAddNewStaff
             // 
             this.gbAddNewStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.gbAddNewStaff.Controls.Add(this.dtpDOB);
             this.gbAddNewStaff.Controls.Add(this.txtAddress);
             this.gbAddNewStaff.Controls.Add(this.lbAddress);
             this.gbAddNewStaff.Controls.Add(this.txtPhone);
             this.gbAddNewStaff.Controls.Add(this.lbPhone);
-            this.gbAddNewStaff.Controls.Add(this.txtDOB);
             this.gbAddNewStaff.Controls.Add(this.lbDOB);
             this.gbAddNewStaff.Controls.Add(this.btnAddNewStaff);
             this.gbAddNewStaff.Controls.Add(this.txtFullname);
@@ -159,6 +184,52 @@
             this.gbAddNewStaff.TabStop = false;
             this.gbAddNewStaff.Text = "New Staff";
             // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtAddress.Location = new System.Drawing.Point(23, 374);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(210, 26);
+            this.txtAddress.TabIndex = 33;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbAddress.Location = new System.Drawing.Point(23, 352);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(58, 19);
+            this.lbAddress.TabIndex = 32;
+            this.lbAddress.Text = "Address";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txtPhone.Location = new System.Drawing.Point(23, 323);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(210, 26);
+            this.txtPhone.TabIndex = 31;
+            // 
+            // lbPhone
+            // 
+            this.lbPhone.AutoSize = true;
+            this.lbPhone.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbPhone.Location = new System.Drawing.Point(23, 301);
+            this.lbPhone.Name = "lbPhone";
+            this.lbPhone.Size = new System.Drawing.Size(48, 19);
+            this.lbPhone.TabIndex = 30;
+            this.lbPhone.Text = "Phone";
+            // 
+            // lbDOB
+            // 
+            this.lbDOB.AutoSize = true;
+            this.lbDOB.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbDOB.Location = new System.Drawing.Point(23, 250);
+            this.lbDOB.Name = "lbDOB";
+            this.lbDOB.Size = new System.Drawing.Size(90, 19);
+            this.lbDOB.TabIndex = 28;
+            this.lbDOB.Text = "Date Of Birth";
+            // 
             // btnAddNewStaff
             // 
             this.btnAddNewStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -169,6 +240,7 @@
             this.btnAddNewStaff.TabIndex = 27;
             this.btnAddNewStaff.Text = "Add";
             this.btnAddNewStaff.UseVisualStyleBackColor = true;
+            this.btnAddNewStaff.Click += new System.EventHandler(this.btnAddNewStaff_Click);
             // 
             // txtFullname
             // 
@@ -312,84 +384,12 @@
             this.btnDeleteStaff.Text = "Delete";
             this.btnDeleteStaff.UseVisualStyleBackColor = true;
             // 
-            // txtDOB
+            // dtpDOB
             // 
-            this.txtDOB.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txtDOB.Location = new System.Drawing.Point(23, 272);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(210, 26);
-            this.txtDOB.TabIndex = 29;
-            // 
-            // lbDOB
-            // 
-            this.lbDOB.AutoSize = true;
-            this.lbDOB.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.lbDOB.Location = new System.Drawing.Point(23, 250);
-            this.lbDOB.Name = "lbDOB";
-            this.lbDOB.Size = new System.Drawing.Size(90, 19);
-            this.lbDOB.TabIndex = 28;
-            this.lbDOB.Text = "Date Of Birth";
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txtPhone.Location = new System.Drawing.Point(23, 323);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(210, 26);
-            this.txtPhone.TabIndex = 31;
-            // 
-            // lbPhone
-            // 
-            this.lbPhone.AutoSize = true;
-            this.lbPhone.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.lbPhone.Location = new System.Drawing.Point(23, 301);
-            this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(48, 19);
-            this.lbPhone.TabIndex = 30;
-            this.lbPhone.Text = "Phone";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Username";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Full Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "BOB";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Phone";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Permissions";
-            this.Column5.Name = "Column5";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txtAddress.Location = new System.Drawing.Point(23, 374);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(210, 26);
-            this.txtAddress.TabIndex = 33;
-            // 
-            // lbAddress
-            // 
-            this.lbAddress.AutoSize = true;
-            this.lbAddress.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.lbAddress.Location = new System.Drawing.Point(23, 352);
-            this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(58, 19);
-            this.lbAddress.TabIndex = 32;
-            this.lbAddress.Text = "Address";
+            this.dtpDOB.Location = new System.Drawing.Point(23, 271);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(210, 27);
+            this.dtpDOB.TabIndex = 34;
             // 
             // frmStaffManagement
             // 
@@ -397,6 +397,7 @@
             this.Controls.Add(this.gbAddNewStaff);
             this.Controls.Add(this.panel1);
             this.Name = "frmStaffManagement";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStaffManagement_FormClosing);
             this.Load += new System.EventHandler(this.frmStaffManagement_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
@@ -435,7 +436,7 @@
         private System.Windows.Forms.Label lbAddress;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lbPhone;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.Label lbDOB;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
     }
 }
