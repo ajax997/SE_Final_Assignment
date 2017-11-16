@@ -55,5 +55,10 @@ namespace Shopping_Management
         {
 
         }
+
+        private void dgvDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

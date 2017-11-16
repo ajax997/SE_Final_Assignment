@@ -58,7 +58,6 @@
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbInformation.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -288,7 +287,6 @@
             this.Unit,
             this.quantity,
             this.price,
-            this.expiredDate,
             this.note});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -314,6 +312,7 @@
             this.dgvDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDetail.Size = new System.Drawing.Size(721, 590);
             this.dgvDetail.TabIndex = 2;
+            this.dgvDetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail_CellContentClick);
             // 
             // id
             // 
@@ -344,11 +343,6 @@
             // 
             this.price.HeaderText = "Price";
             this.price.Name = "price";
-            // 
-            // expiredDate
-            // 
-            this.expiredDate.HeaderText = "Expired Date";
-            this.expiredDate.Name = "expiredDate";
             // 
             // note
             // 
@@ -402,7 +396,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expiredDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn note;
     }
 }

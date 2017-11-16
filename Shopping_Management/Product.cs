@@ -13,17 +13,15 @@ namespace Shopping_Management
         public int unit { get; set; }
         public int quantity { get; set; }
         public string price { get; set; }
-        public string expiredDate { get; set; }
         public string note { get; set; }
 
-        public Product(string productID, string productName, int unit, int quantity, string price, string expiredDate, string note)
+        public Product(string productID, string productName, int unit, int quantity, string price, string note)
         {
             this.productID = productID;
             this.productName = productName;
             this.unit = unit;
             this.quantity = quantity;
             this.price = price;
-            this.expiredDate = expiredDate;
             this.note = note;
         }
     }
