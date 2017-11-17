@@ -8,21 +8,22 @@ namespace Shopping_Management
 {
     class Product
     {
-        public string productID { get; set; }
+        public int productID { get; set; }
         public string productName { get; set; }
         public int unit { get; set; }
         public int quantity { get; set; }
         public string price { get; set; }
-        public string note { get; set; }
+        public int available { get; set; }
+        
 
-        public Product(string productID, string productName, int unit, int quantity, string price, string note)
+        public Product(int productID, string productName, int unit, int quantity, string price, int available)
         {
             this.productID = productID;
             this.productName = productName;
             this.unit = unit;
             this.quantity = quantity;
             this.price = price;
-            this.note = note;
+            this.available = available;
         }
     }
 }

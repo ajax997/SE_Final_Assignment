@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbInformation = new System.Windows.Forms.GroupBox();
-            this.dtpExpiredDate = new System.Windows.Forms.DateTimePicker();
-            this.lbExpiredDate = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.lbPrice = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,9 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cbUnit = new System.Windows.Forms.ComboBox();
             this.txtquantity = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.lbQuantity = new System.Windows.Forms.Label();
-            this.lbNote = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lbProductName = new System.Windows.Forms.Label();
             this.tbUnitType = new System.Windows.Forms.Label();
@@ -67,8 +63,6 @@
             // 
             this.gbInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.gbInformation.Controls.Add(this.dtpExpiredDate);
-            this.gbInformation.Controls.Add(this.lbExpiredDate);
             this.gbInformation.Controls.Add(this.txtPrice);
             this.gbInformation.Controls.Add(this.lbPrice);
             this.gbInformation.Controls.Add(this.button3);
@@ -76,9 +70,7 @@
             this.gbInformation.Controls.Add(this.button1);
             this.gbInformation.Controls.Add(this.cbUnit);
             this.gbInformation.Controls.Add(this.txtquantity);
-            this.gbInformation.Controls.Add(this.textBox4);
             this.gbInformation.Controls.Add(this.lbQuantity);
-            this.gbInformation.Controls.Add(this.lbNote);
             this.gbInformation.Controls.Add(this.txtName);
             this.gbInformation.Controls.Add(this.lbProductName);
             this.gbInformation.Controls.Add(this.tbUnitType);
@@ -91,23 +83,6 @@
             this.gbInformation.TabIndex = 0;
             this.gbInformation.TabStop = false;
             this.gbInformation.Text = "Informations";
-            // 
-            // dtpExpiredDate
-            // 
-            this.dtpExpiredDate.Location = new System.Drawing.Point(25, 389);
-            this.dtpExpiredDate.Name = "dtpExpiredDate";
-            this.dtpExpiredDate.Size = new System.Drawing.Size(200, 24);
-            this.dtpExpiredDate.TabIndex = 8;
-            // 
-            // lbExpiredDate
-            // 
-            this.lbExpiredDate.AutoSize = true;
-            this.lbExpiredDate.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.lbExpiredDate.Location = new System.Drawing.Point(24, 369);
-            this.lbExpiredDate.Name = "lbExpiredDate";
-            this.lbExpiredDate.Size = new System.Drawing.Size(83, 17);
-            this.lbExpiredDate.TabIndex = 6;
-            this.lbExpiredDate.Text = "Expired Date";
             // 
             // txtPrice
             // 
@@ -131,7 +106,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.button3.Location = new System.Drawing.Point(37, 554);
+            this.button3.Location = new System.Drawing.Point(41, 515);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 30);
             this.button3.TabIndex = 3;
@@ -142,7 +117,7 @@
             // 
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btnAdd.Location = new System.Drawing.Point(94, 517);
+            this.btnAdd.Location = new System.Drawing.Point(98, 478);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(88, 30);
             this.btnAdd.TabIndex = 3;
@@ -154,7 +129,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.button1.Location = new System.Drawing.Point(141, 554);
+            this.button1.Location = new System.Drawing.Point(145, 515);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 30);
             this.button1.TabIndex = 3;
@@ -178,15 +153,6 @@
             this.txtquantity.Size = new System.Drawing.Size(206, 24);
             this.txtquantity.TabIndex = 1;
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.textBox4.Location = new System.Drawing.Point(25, 449);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(206, 52);
-            this.textBox4.TabIndex = 1;
-            // 
             // lbQuantity
             // 
             this.lbQuantity.AutoSize = true;
@@ -196,16 +162,6 @@
             this.lbQuantity.Size = new System.Drawing.Size(56, 17);
             this.lbQuantity.TabIndex = 0;
             this.lbQuantity.Text = "Quantity";
-            // 
-            // lbNote
-            // 
-            this.lbNote.AutoSize = true;
-            this.lbNote.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.lbNote.Location = new System.Drawing.Point(22, 429);
-            this.lbNote.Name = "lbNote";
-            this.lbNote.Size = new System.Drawing.Size(37, 17);
-            this.lbNote.TabIndex = 0;
-            this.lbNote.Text = "Note";
             // 
             // txtName
             // 
@@ -339,7 +295,7 @@
             // 
             // note
             // 
-            this.note.HeaderText = "Note";
+            this.note.HeaderText = "Available";
             this.note.Name = "note";
             // 
             // frmImportProducts
@@ -365,8 +321,6 @@
 
         private System.Windows.Forms.GroupBox gbInformation;
         private System.Windows.Forms.ComboBox cbUnit;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label lbNote;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lbProductName;
         private System.Windows.Forms.Label tbUnitType;
@@ -381,8 +335,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lbPrice;
-        private System.Windows.Forms.Label lbExpiredDate;
-        private System.Windows.Forms.DateTimePicker dtpExpiredDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn productCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;

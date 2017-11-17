@@ -11,6 +11,8 @@ namespace Shopping_Management
 {
     public partial class frmImportProducts : Form
     {
+
+        ProductHelper ProductHelper = new ProductHelper();
         public frmImportProducts(bool en)
         {
             InitializeComponent();
@@ -19,7 +21,29 @@ namespace Shopping_Management
         private void frmImportProducts_Load(object sender, EventArgs e)
         {
             this.Height = this.Height + 1;
+            UpdateTable();
         }
+
+
+        public void UpdateTable()
+        {
+            dgvDetail.Rows.Clear();
+            List<Product> res = ProductHelper.getAll();
+            int index = 0;
+            foreach(Product pro in res)
+            {
+                DataGridViewRow row = (DataGridViewRow)dgvDetail.Rows[index].Clone();
+                row.Cells[0].Value = pro.productID;
+                row.Cells[1].Value = pro.productName ;
+                row.Cells[2].Value = pro.unit;
+                row.Cells[3].Value = pro.quantity;
+                row.Cells[4].Value = pro.price;
+                row.Cells[5].Value = pro.available;
+                dgvDetail.Rows.Add(row);
+                index++;
+            }
+        }
+
 
         public void DataGirdViewResize()
         {
@@ -53,8 +77,28 @@ namespace Shopping_Management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int current = 0;
+            foreach (DataGridViewRow row in dgvDetail.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    if ((int)row.Cells[0].Value == int.Parse(txtProductCode.Text))
+                    {
+                        current = (int)row.Cells[3].Value;
+                    }
+                }
+            }
 
+            Product pro = new Product(int.Parse(txtProductCode.Text), txtName.Text, int.Parse(cbUnit.SelectedIndex.ToString()), int.Parse(txtquantity.Text) + current,txtPrice.Text, 1);
+            if (ProductHelper.InsertProduct(pro))
+                UpdateTable();
+            else
+            {
+                MessageBox.Show("Error while trying to insert or update product to database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
+
 
         private void dgvDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
