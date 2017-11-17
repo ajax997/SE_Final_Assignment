@@ -77,25 +77,37 @@ namespace Shopping_Management
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (authentication.CheckLogin(int.Parse(txtUsername.Text), txtPassword.Text) == 1)
+            if (txtUsername.Text == "" || txtPassword.Text == "")
             {
-                frmDashboard frm = new frmDashboard(_en, true);
-                frm.Show();
-
+                MessageBox.Show("Invalid input, please check!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                if (authentication.CheckLogin(int.Parse(txtUsername.Text), txtPassword.Text) == 0)
+                UserLogin user = authentication.CheckLogin(int.Parse(txtUsername.Text), txtPassword.Text);
+                if (user == null)
                 {
-                    frmDashboard frm = new frmDashboard(_en, false);
-                    frm.Show();
+                    MessageBox.Show("User ID or password is invalid, please check or contact the admin to slove!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("User ID or password is invalid, please check or contact the admin to slove!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (user.admin == 1)
+                    {
+                        frmDashboard frm = new frmDashboard(_en, true, user.fullname);
+                        frm.Show();
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        frmDashboard frm = new frmDashboard(_en, false, user.fullname);
+                        frm.Show();
+                        this.Dispose();
+                    }
                 }
             }
         }
+        
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -107,6 +119,20 @@ namespace Shopping_Management
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

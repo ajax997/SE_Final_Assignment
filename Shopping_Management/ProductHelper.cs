@@ -31,7 +31,7 @@ namespace Shopping_Management
 
                 int productID =(int)row["product_id"];
                 string name = (string)row["name"];
-                int unit_type = (int)row["unit_type"];
+                string unit_type = (string)row["unit_type"];
                 int quantity = (int)row["quantity"];
                 string price = (string)row["price"];
                 int available = (int)row["available"];
@@ -85,5 +85,38 @@ namespace Shopping_Management
                 throw e;
             }
         }
+
+        public bool UpdateProduct(Product pro)
+        {
+            try
+            {
+                String sql = @"update  [product] set name = @productname,unit_type = @type,quantity =  @quantity,price =  @price, available =  @available where product_id = @productid ";
+
+
+                SqlParameter p2 = new SqlParameter("@productname", pro.productName);
+                SqlParameter p3 = new SqlParameter("@type", pro.unit);
+                SqlParameter p4 = new SqlParameter("@quantity", pro.quantity);
+                SqlParameter p5 = new SqlParameter("@price", pro.price);
+                SqlParameter p6 = new SqlParameter("@available", pro.available);
+                SqlParameter p1 = new SqlParameter("@productid", pro.productID);
+
+
+                SqlParameter[] param = { p2, p3, p4, p5, p6, p1 };
+                return manager.executeUpdate(sql, param);
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+        }
+        public bool DeleteProduct(int productID)
+        {
+            String sql = "delete from [product] where product_id = @ID";
+            SqlParameter p1 = new SqlParameter("@ID", productID);
+            SqlParameter[] param = { p1 };
+
+            return manager.executeUpdate(sql, param);
+        }
+
     }
 }

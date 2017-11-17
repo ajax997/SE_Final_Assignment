@@ -18,7 +18,7 @@ namespace Shopping_Management
             manager.open();
         }
 
-        public int CheckLogin(int id, string pass)
+        public UserLogin CheckLogin(int id, string pass)
         {
             String sql = @"select * from [staff] where staff_id = @id and password = @pass";
             SqlParameter p1 = new SqlParameter("@id", id);
@@ -28,15 +28,11 @@ namespace Shopping_Management
             if (res.Rows.Count > 0)
             {
                 DataRow row = res.Rows[0];
-
-                int admin = (int)row["role"];
-                if (admin == 1)
-                    return 1;
-                else
-                    return 0;
+                UserLogin user = new UserLogin((int)row["staff_id"], null, (string)row["name"], 0, null, null, null, (int)row["role"]);
+                return user;
             }
-               
-            return -1;
+
+            return null;
 
         }
         public bool InsertUser(UserLogin user)

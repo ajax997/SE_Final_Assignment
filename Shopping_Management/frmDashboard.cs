@@ -14,11 +14,13 @@ namespace Shopping_Management
     public partial class frmDashboard : Form
     {
         private bool en;
-        public frmDashboard(bool en, bool admin)
+        private string fullname;
+        public frmDashboard(bool en, bool admin, string fullname)
         {
            
             InitializeComponent();
             this.en = en;
+            this.fullname = fullname;
 
            
 
@@ -92,6 +94,7 @@ namespace Shopping_Management
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(fullname);
             lbDashboard.Text = Language.GetStringMessage(en, "frmDashBoard_lbDashBoard");
             this.Text = Language.GetStringMessage(en, "frmDashBoard_Title");
         }

@@ -10,13 +10,13 @@ namespace Shopping_Management
     {
         public int productID { get; set; }
         public string productName { get; set; }
-        public int unit { get; set; }
+        public string unit { get; set; }
         public int quantity { get; set; }
         public string price { get; set; }
         public int available { get; set; }
         
 
-        public Product(int productID, string productName, int unit, int quantity, string price, int available)
+        public Product(int productID, string productName, string unit, int quantity, string price, int available)
         {
             this.productID = productID;
             this.productName = productName;
