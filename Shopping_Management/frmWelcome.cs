@@ -99,7 +99,8 @@ namespace Shopping_Management
         private void picLogin_Click(object sender, EventArgs e)
         {
             frmLogin login = new frmLogin(cbLanguage.SelectedIndex == 0);
-            login.ShowDialog();
+            if (login.ShowDialog() == DialogResult.OK)
+                this.Hide();
         }
 
         private void frmWelcome_Load(object sender, EventArgs e)

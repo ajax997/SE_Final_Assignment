@@ -15,12 +15,14 @@ namespace Shopping_Management
     {
         private bool en;
         private string fullname;
-        public frmDashboard(bool en, bool admin, string fullname)
+        private int staffID;
+        public frmDashboard(bool en, bool admin, string fullname, int staffID)
         {
            
             InitializeComponent();
             this.en = en;
             this.fullname = fullname;
+            this.staffID = staffID;
 
            
 
@@ -52,7 +54,7 @@ namespace Shopping_Management
         }
         private void picSelling_Click(object sender, EventArgs e)
         {
-            frmSelling frm = new frmSelling(en);
+            frmSelling frm = new frmSelling(en,fullname, staffID);
             frm.Show();
         }
         private void picReport_MouseHover(object sender, EventArgs e)
@@ -108,7 +110,11 @@ namespace Shopping_Management
 
         private void picClose_Click(object sender, EventArgs e)
         {
+            frmWelcome frm = new frmWelcome();
+            frm.Show();
+               
             this.Dispose();
+            
         }
 
         private void picReport_Click(object sender, EventArgs e)

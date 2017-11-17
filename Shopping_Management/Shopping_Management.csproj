@@ -82,6 +82,12 @@
     <Compile Include="AuthenticationHelper.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="Encryption.cs" />
+    <Compile Include="frmAddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewCustomer.Designer.cs">
+      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,8 @@
     <Compile Include="frmWelcome.Designer.cs">
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoice.cs" />
+    <Compile Include="InvoiceHelper.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductHelper.cs" />
@@ -152,6 +160,9 @@
       <DependentUpon>Language.vi-VN.resx</DependentUpon>
     </Compile>
     <Compile Include="UserLogin.cs" />
+    <EmbeddedResource Include="frmAddNewCustomer.resx">
+      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>

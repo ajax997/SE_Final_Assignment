@@ -94,14 +94,16 @@ namespace Shopping_Management
                 {
                     if (user.admin == 1)
                     {
-                        frmDashboard frm = new frmDashboard(_en, true, user.fullname);
+                        frmDashboard frm = new frmDashboard(_en, true, user.fullname, user.staff_id);
                         frm.Show();
+                        DialogResult = DialogResult.OK;
                         this.Dispose();
                     }
                     else
                     {
-                        frmDashboard frm = new frmDashboard(_en, false, user.fullname);
+                        frmDashboard frm = new frmDashboard(_en, false, user.fullname, user.staff_id);
                         frm.Show();
+                        DialogResult = DialogResult.OK;
                         this.Dispose();
                     }
                 }
@@ -118,6 +120,7 @@ namespace Shopping_Management
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             this.Dispose();
         }
 
@@ -133,6 +136,11 @@ namespace Shopping_Management
             {
                 e.Handled = true;
             }
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }
