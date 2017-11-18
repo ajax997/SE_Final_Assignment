@@ -32,10 +32,10 @@ namespace Shopping_Management
 
         }
 
-        public string CheckCustomerExist(int id)
+        public string CheckCustomerExist(string id)
         {
-            String sql = "select * from [customer] where customer_id = @id or phone = @id";
-            SqlParameter p = new SqlParameter("@id", id);
+            String sql = "select * from [customer] where phone = @phone ";
+            SqlParameter p = new SqlParameter("@phone", id);
             DataTable res = manager.executeQuery(sql, new SqlParameter[] { p });
             if(res.Rows.Count == 0)
             {
@@ -60,10 +60,49 @@ namespace Shopping_Management
             else
             {
                 DataRow row = res.Rows[0];
-                Product product = new Product((int)row["product_id"], (string)row["name"], (string)row["unit_type"], (int)row["quantity"], (string)row["quantity"], (int)row["available"]);
+                Product product = new Product((int)row["product_id"], (string)row["name"], (string)row["unit_type"], (int)row["quantity"], (string)row["price"], (int)row["available"]);
                 return product;
             }
         }
+        public bool InsertInvoice(Invoice invoice)
+        {
+           
+            String sql = "insert into [invoice] values(@invoiceID, @staffID, @staffName, @customerID, @date, @totalPrice, @quantity, @payment_menthol)";
+            SqlParameter p1 = new SqlParameter("@invoiceID", invoice.invoice_id);
+            SqlParameter p2 = new SqlParameter("@staffID", invoice.staff_id);
+            SqlParameter p3 = new SqlParameter("@staffName", invoice.staff_name);
+            SqlParameter p4 = new SqlParameter("@customerID", invoice.customer_id);
+            SqlParameter p5 = new SqlParameter("@date", invoice.date);
+            SqlParameter p6 = new SqlParameter("@totalPrice", invoice.total_price);
+            SqlParameter p7 = new SqlParameter("@quantity", invoice.product_quantity);
+            SqlParameter p8 = new SqlParameter("@payment_menthol", invoice.payment_menthol);
+            SqlParameter[] parameter = { p1,p2,p3,p4,p5,p6,p7,p8};
+           return manager.executeUpdate(sql, parameter);
 
+        }
+        public bool InsertInvoiceItem(InvoiceItem invoiceItem)
+        {
+
+            String sql = "insert into [invoice_item] values(@invoiceID, @productID, @name, @quantity, @unit, @price, @total)";
+            SqlParameter p1 = new SqlParameter("@invoiceID", invoiceItem.InvoiceID);
+            SqlParameter p2 = new SqlParameter("@productID", invoiceItem.ProductID);
+            SqlParameter p3 = new SqlParameter("@name", invoiceItem.Name);
+            SqlParameter p4 = new SqlParameter("@quantity", invoiceItem.Quantity);
+            SqlParameter p5 = new SqlParameter("@unit", invoiceItem.Unit);
+            SqlParameter p6 = new SqlParameter("@price", invoiceItem.Price);
+            SqlParameter p7 = new SqlParameter("@total", invoiceItem.Total);
+
+            SqlParameter[] parameter = { p1, p2, p3, p4, p5, p6, p7};
+            return manager.executeUpdate(sql, parameter);
+
+        }
+        public bool UpdateProduct(int productID, int quantity, int available)
+        {
+            String sql = @"update  [product] set quantity = @quantity, available = @available where product_id = @productID";
+            SqlParameter p1 = new SqlParameter("@quantity", quantity);
+            SqlParameter p2 = new SqlParameter("@available", available);
+            SqlParameter p3 = new SqlParameter("@productID", productID);
+            return manager.executeUpdate(sql, new SqlParameter[] { p1, p2, p3 });
+        }
     }
 }

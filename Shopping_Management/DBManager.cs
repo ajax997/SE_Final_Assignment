@@ -63,7 +63,6 @@ namespace Shopping_Management
                 cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddRange(parameters);
                 int row = cmd.ExecuteNonQuery();
-
                 return (row == 1);
             }
             catch (Exception e)

@@ -15,7 +15,7 @@ namespace Shopping_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSelling(true, "Nguyen Phuc Nghi", 51503035));
+            Application.Run(new frmWelcome());
         }
     }
 }

@@ -142,5 +142,13 @@ namespace Shopping_Management
         {
             
         }
+
+        private void txtPassword_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                btnLogin_Click(null, null);
+            }
+        }
     }
 }

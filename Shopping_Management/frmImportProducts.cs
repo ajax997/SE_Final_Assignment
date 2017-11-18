@@ -156,11 +156,7 @@ namespace Shopping_Management
                 e.Handled = true;
             }
 
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
+           
         }
         public string textWithcomma { get; set; }
         public string textWithoutcomma { get; set; }
@@ -262,12 +258,16 @@ namespace Shopping_Management
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to delete this product, this action can not undo?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                ProductHelper.DeleteProduct(int.Parse(txtProductCode.Text));
-                UpdateTable();
-                FormClear();
+                if (MessageBox.Show("Are you sure to delete this product, this action can not undo?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ProductHelper.DeleteProduct(int.Parse(txtProductCode.Text));
+                    UpdateTable();
+                    FormClear();
+                }
             }
+            catch { }
         }
     }
 }

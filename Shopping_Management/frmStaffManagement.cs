@@ -60,7 +60,7 @@ namespace Shopping_Management
                 sex = 1;
             else
                 sex = 0;
-            UserLogin user = new UserLogin(int.Parse(txtUsername.Text), Encryption.sha256(txtNewPass.Text), txtFullname.Text, sex, dtpDOB.Value.ToShortDateString(), txtPhone.Text, txtAddress.Text, 1);
+            UserLogin user = new UserLogin(int.Parse(txtUsername.Text), Encryption.sha256(txtNewPass.Text), txtFullname.Text, sex, dtpDOB.Value.ToShortDateString(), txtPhone.Text, txtAddress.Text, 0);
             if (authentication.InsertUser(user))
             {
                 MessageBox.Show("Insert User Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
