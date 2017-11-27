@@ -40,8 +40,8 @@
             this.lbAdminRetypePass = new System.Windows.Forms.Label();
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.lbAdminNewPass = new System.Windows.Forms.Label();
-            this.txtusername = new System.Windows.Forms.TextBox();
             this.lbAdminUsername = new System.Windows.Forms.Label();
+            this.cbID = new System.Windows.Forms.ComboBox();
             this.gpAppInfo.SuspendLayout();
             this.gbAdminInfo.SuspendLayout();
             this.SuspendLayout();
@@ -86,16 +86,17 @@
             this.btnApply.TabIndex = 2;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // gbAdminInfo
             // 
+            this.gbAdminInfo.Controls.Add(this.cbID);
             this.gbAdminInfo.Controls.Add(this.txtFullname);
             this.gbAdminInfo.Controls.Add(this.lbAdminFullName);
             this.gbAdminInfo.Controls.Add(this.txtRetypePass);
             this.gbAdminInfo.Controls.Add(this.lbAdminRetypePass);
             this.gbAdminInfo.Controls.Add(this.txtNewPass);
             this.gbAdminInfo.Controls.Add(this.lbAdminNewPass);
-            this.gbAdminInfo.Controls.Add(this.txtusername);
             this.gbAdminInfo.Controls.Add(this.lbAdminUsername);
             this.gbAdminInfo.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.gbAdminInfo.Location = new System.Drawing.Point(12, 140);
@@ -155,21 +156,23 @@
             this.lbAdminNewPass.TabIndex = 2;
             this.lbAdminNewPass.Text = "New Password";
             // 
-            // txtusername
-            // 
-            this.txtusername.Location = new System.Drawing.Point(156, 37);
-            this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(201, 24);
-            this.txtusername.TabIndex = 1;
-            // 
             // lbAdminUsername
             // 
             this.lbAdminUsername.AutoSize = true;
             this.lbAdminUsername.Location = new System.Drawing.Point(17, 40);
             this.lbAdminUsername.Name = "lbAdminUsername";
-            this.lbAdminUsername.Size = new System.Drawing.Size(108, 17);
+            this.lbAdminUsername.Size = new System.Drawing.Size(61, 17);
             this.lbAdminUsername.TabIndex = 0;
-            this.lbAdminUsername.Text = "Admin Username";
+            this.lbAdminUsername.Text = "Admin ID";
+            // 
+            // cbID
+            // 
+            this.cbID.FormattingEnabled = true;
+            this.cbID.Location = new System.Drawing.Point(156, 40);
+            this.cbID.Name = "cbID";
+            this.cbID.Size = new System.Drawing.Size(200, 23);
+            this.cbID.TabIndex = 8;
+            this.cbID.SelectedIndexChanged += new System.EventHandler(this.cbID_SelectedIndexChanged);
             // 
             // frmSetting
             // 
@@ -207,7 +210,7 @@
         private System.Windows.Forms.Label lbAdminRetypePass;
         private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label lbAdminNewPass;
-        private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.Label lbAdminUsername;
+        private System.Windows.Forms.ComboBox cbID;
     }
 }

@@ -112,8 +112,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDetail.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvDetail.Location = new System.Drawing.Point(0, 0);
+            this.dgvDetail.Location = new System.Drawing.Point(14, 3);
+            this.dgvDetail.MultiSelect = false;
             this.dgvDetail.Name = "dgvDetail";
+            this.dgvDetail.ReadOnly = true;
             this.dgvDetail.RowHeadersVisible = false;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
@@ -123,39 +125,49 @@
             this.dgvDetail.RowTemplate.ReadOnly = true;
             this.dgvDetail.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetail.Size = new System.Drawing.Size(695, 601);
             this.dgvDetail.TabIndex = 3;
+            this.dgvDetail.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvDetail_RowsAdded);
+            this.dgvDetail.SelectionChanged += new System.EventHandler(this.dgvDetail_SelectionChanged);
             this.dgvDetail.SizeChanged += new System.EventHandler(this.dgvDetail_SizeChanged);
+            this.dgvDetail.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.dgvDetail_PreviewKeyDown);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "User ID";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Full Name";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // sex
             // 
             this.sex.HeaderText = "Sex";
             this.sex.Name = "sex";
+            this.sex.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "BOB";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Phone";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // address
             // 
             this.address.HeaderText = "Address";
             this.address.Name = "address";
+            this.address.ReadOnly = true;
             // 
             // gbAddNewStaff
             // 
@@ -242,6 +254,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(252, 26);
             this.txtPhone.TabIndex = 31;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // lbPhone
             // 
@@ -282,6 +295,7 @@
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(252, 26);
             this.txtFullname.TabIndex = 26;
+            this.txtFullname.TextChanged += new System.EventHandler(this.txtFullname_TextChanged);
             // 
             // lbFullname
             // 
@@ -295,11 +309,14 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.Enabled = false;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.txtUsername.Location = new System.Drawing.Point(23, 68);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(252, 26);
             this.txtUsername.TabIndex = 24;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // lbUsername
             // 
@@ -307,9 +324,9 @@
             this.lbUsername.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.lbUsername.Location = new System.Drawing.Point(23, 46);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(71, 19);
+            this.lbUsername.Size = new System.Drawing.Size(55, 19);
             this.lbUsername.TabIndex = 23;
-            this.lbUsername.Text = "Username";
+            this.lbUsername.Text = "User ID";
             // 
             // txtRetypePass
             // 
@@ -373,10 +390,12 @@
             // 
             // frmStaffManagement
             // 
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1038, 658);
             this.Controls.Add(this.gbAddNewStaff);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "frmStaffManagement";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStaffManagement_FormClosing);
             this.Load += new System.EventHandler(this.frmStaffManagement_Load);

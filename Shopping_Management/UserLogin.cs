@@ -20,7 +20,7 @@ namespace Shopping_Management
         {
             get; set;
         }
-        public int sex
+        public string sex
         {
             get; set;
         }
@@ -46,7 +46,7 @@ namespace Shopping_Management
         }
 
 
-        public UserLogin(int staff_id, string password, string fullname, int sex, string DOB, string phone, string address, int admin)
+        public UserLogin(int staff_id, string password, string fullname, string sex, string DOB, string phone, string address, int admin)
         {
             this.staff_id = staff_id;
             this.password = password;

@@ -103,7 +103,7 @@ namespace Shopping_Management
                     {
                         if (user.admin == -1)
                         {
-                                
+                            MessageBox.Show("Your Account has been baned! Contact Manager for more infomations!", "Invalid Privileg",MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
                         else
                         {

@@ -98,7 +98,7 @@ namespace Shopping_Management
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(fullname);
+            lbDashboard.Text = lbDashboard.Text + " - " +  fullname;
             lbDashboard.Text = Language.GetStringMessage(en, "frmDashBoard_lbDashBoard");
             this.Text = Language.GetStringMessage(en, "frmDashBoard_Title");
         }
