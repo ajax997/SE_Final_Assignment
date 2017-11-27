@@ -98,14 +98,15 @@ namespace Shopping_Management
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            lbDashboard.Text = lbDashboard.Text + " - " +  fullname;
+           
             lbDashboard.Text = Language.GetStringMessage(en, "frmDashBoard_lbDashBoard");
+            lbDashboard.Text = lbDashboard.Text + " - " + fullname;
             this.Text = Language.GetStringMessage(en, "frmDashBoard_Title");
         }
 
         private void picImport_Click(object sender, EventArgs e)
         {
-            if (permission != 1)
+            if (permission != 0)
             {
                 frmImportProducts importProducts = new frmImportProducts(en);
                 importProducts.Show();

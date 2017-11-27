@@ -645,6 +645,7 @@
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.newToolStripMenuItem.Text = "&New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // newCustomerToolStripMenuItem
             // 
@@ -693,7 +694,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmSelling";
-            this.Text = "frmSelling";
+            this.Text = "Selling ";
             this.Load += new System.EventHandler(this.frmSelling_Load);
             this.pnInfo.ResumeLayout(false);
             this.gpPayment.ResumeLayout(false);

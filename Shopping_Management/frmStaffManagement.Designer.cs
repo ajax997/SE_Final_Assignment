@@ -35,12 +35,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaffManagement));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDetail = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAddNewStaff = new System.Windows.Forms.GroupBox();
             this.cbSex = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +55,13 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lbNewPass = new System.Windows.Forms.Label();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Active = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
             this.gbAddNewStaff.SuspendLayout();
@@ -101,7 +102,8 @@
             this.sex,
             this.Column3,
             this.Column4,
-            this.address});
+            this.address,
+            this.Active});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -127,47 +129,11 @@
             this.dgvDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetail.Size = new System.Drawing.Size(695, 601);
-            this.dgvDetail.TabIndex = 3;
+            this.dgvDetail.TabIndex = 12;
             this.dgvDetail.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvDetail_RowsAdded);
             this.dgvDetail.SelectionChanged += new System.EventHandler(this.dgvDetail_SelectionChanged);
             this.dgvDetail.SizeChanged += new System.EventHandler(this.dgvDetail_SizeChanged);
             this.dgvDetail.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.dgvDetail_PreviewKeyDown);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "User ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Full Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // sex
-            // 
-            this.sex.HeaderText = "Sex";
-            this.sex.Name = "sex";
-            this.sex.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "BOB";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Phone";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
             // 
             // gbAddNewStaff
             // 
@@ -209,7 +175,7 @@
             this.cbSex.Location = new System.Drawing.Point(27, 277);
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(248, 28);
-            this.cbSex.TabIndex = 36;
+            this.cbSex.TabIndex = 5;
             // 
             // label1
             // 
@@ -226,7 +192,7 @@
             this.dtpDOB.Location = new System.Drawing.Point(23, 340);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(252, 27);
-            this.dtpDOB.TabIndex = 34;
+            this.dtpDOB.TabIndex = 6;
             // 
             // txtAddress
             // 
@@ -234,7 +200,7 @@
             this.txtAddress.Location = new System.Drawing.Point(23, 443);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(252, 26);
-            this.txtAddress.TabIndex = 33;
+            this.txtAddress.TabIndex = 8;
             // 
             // lbAddress
             // 
@@ -253,7 +219,7 @@
             this.txtPhone.Location = new System.Drawing.Point(23, 392);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(252, 26);
-            this.txtPhone.TabIndex = 31;
+            this.txtPhone.TabIndex = 7;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // lbPhone
@@ -283,7 +249,7 @@
             this.btnAddNewStaff.Location = new System.Drawing.Point(200, 571);
             this.btnAddNewStaff.Name = "btnAddNewStaff";
             this.btnAddNewStaff.Size = new System.Drawing.Size(75, 36);
-            this.btnAddNewStaff.TabIndex = 27;
+            this.btnAddNewStaff.TabIndex = 9;
             this.btnAddNewStaff.Text = "Add";
             this.btnAddNewStaff.UseVisualStyleBackColor = true;
             this.btnAddNewStaff.Click += new System.EventHandler(this.btnAddNewStaff_Click);
@@ -294,7 +260,7 @@
             this.txtFullname.Location = new System.Drawing.Point(23, 119);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(252, 26);
-            this.txtFullname.TabIndex = 26;
+            this.txtFullname.TabIndex = 2;
             this.txtFullname.TextChanged += new System.EventHandler(this.txtFullname_TextChanged);
             // 
             // lbFullname
@@ -314,7 +280,7 @@
             this.txtUsername.Location = new System.Drawing.Point(23, 68);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(252, 26);
-            this.txtUsername.TabIndex = 24;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
@@ -334,7 +300,7 @@
             this.txtRetypePass.Location = new System.Drawing.Point(23, 221);
             this.txtRetypePass.Name = "txtRetypePass";
             this.txtRetypePass.Size = new System.Drawing.Size(252, 26);
-            this.txtRetypePass.TabIndex = 18;
+            this.txtRetypePass.TabIndex = 4;
             this.txtRetypePass.UseSystemPasswordChar = true;
             // 
             // lbRetype
@@ -353,7 +319,7 @@
             this.txtNewPass.Location = new System.Drawing.Point(23, 170);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.Size = new System.Drawing.Size(252, 26);
-            this.txtNewPass.TabIndex = 16;
+            this.txtNewPass.TabIndex = 3;
             this.txtNewPass.UseSystemPasswordChar = true;
             // 
             // btnUpdate
@@ -363,9 +329,10 @@
             this.btnUpdate.Location = new System.Drawing.Point(16, 571);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 36);
-            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lbNewPass
             // 
@@ -384,9 +351,52 @@
             this.btnDeleteStaff.Location = new System.Drawing.Point(108, 571);
             this.btnDeleteStaff.Name = "btnDeleteStaff";
             this.btnDeleteStaff.Size = new System.Drawing.Size(75, 36);
-            this.btnDeleteStaff.TabIndex = 0;
+            this.btnDeleteStaff.TabIndex = 10;
             this.btnDeleteStaff.Text = "Delete";
             this.btnDeleteStaff.UseVisualStyleBackColor = true;
+            this.btnDeleteStaff.Click += new System.EventHandler(this.btnDeleteStaff_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "User ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // sex
+            // 
+            this.sex.HeaderText = "Sex";
+            this.sex.Name = "sex";
+            this.sex.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "BOB";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
+            // Active
+            // 
+            this.Active.HeaderText = "Active";
+            this.Active.Name = "Active";
+            this.Active.ReadOnly = true;
             // 
             // frmStaffManagement
             // 
@@ -397,6 +407,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmStaffManagement";
+            this.Text = "Staff Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStaffManagement_FormClosing);
             this.Load += new System.EventHandler(this.frmStaffManagement_Load);
             this.panel1.ResumeLayout(false);
@@ -437,5 +448,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Active;
     }
 }

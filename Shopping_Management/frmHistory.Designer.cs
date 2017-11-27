@@ -319,7 +319,7 @@
             this.Controls.Add(this.tabDetails);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHistory";
-            this.Text = "frmHistory";
+            this.Text = "Invoices History";
             this.Load += new System.EventHandler(this.frmHistory_Load);
             this.tabDetails.ResumeLayout(false);
             this.tpInvoice.ResumeLayout(false);

@@ -127,10 +127,11 @@
             // lbInfor
             // 
             this.lbInfor.AutoSize = true;
-            this.lbInfor.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.lbInfor.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lbInfor.ForeColor = System.Drawing.Color.White;
             this.lbInfor.Location = new System.Drawing.Point(23, 49);
             this.lbInfor.Name = "lbInfor";
-            this.lbInfor.Size = new System.Drawing.Size(0, 17);
+            this.lbInfor.Size = new System.Drawing.Size(0, 20);
             this.lbInfor.TabIndex = 2;
             // 
             // panel1

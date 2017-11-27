@@ -187,7 +187,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSetting";
-            this.Text = "frmSetting";
+            this.Text = "Setting";
             this.Load += new System.EventHandler(this.frmSetting_Load);
             this.gpAppInfo.ResumeLayout(false);
             this.gpAppInfo.PerformLayout();

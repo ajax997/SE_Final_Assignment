@@ -94,7 +94,7 @@
             this.cbAvailable.Location = new System.Drawing.Point(27, 366);
             this.cbAvailable.Name = "cbAvailable";
             this.cbAvailable.Size = new System.Drawing.Size(79, 21);
-            this.cbAvailable.TabIndex = 9;
+            this.cbAvailable.TabIndex = 6;
             this.cbAvailable.Text = "Available";
             this.cbAvailable.UseVisualStyleBackColor = true;
             // 
@@ -127,7 +127,7 @@
             this.btnEdit.Location = new System.Drawing.Point(41, 515);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(88, 30);
-            this.btnEdit.TabIndex = 7;
+            this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -139,7 +139,7 @@
             this.btnAdd.Location = new System.Drawing.Point(98, 478);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(88, 30);
-            this.btnAdd.TabIndex = 6;
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -152,7 +152,7 @@
             this.btnDelete.Location = new System.Drawing.Point(145, 515);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(88, 30);
-            this.btnDelete.TabIndex = 8;
+            this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -302,7 +302,7 @@
             this.dgvDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetail.Size = new System.Drawing.Size(721, 590);
-            this.dgvDetail.TabIndex = 2;
+            this.dgvDetail.TabIndex = 10;
             this.dgvDetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail_CellContentClick);
             this.dgvDetail.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvDetail_RowsAdded);
             this.dgvDetail.SelectionChanged += new System.EventHandler(this.dgvDetail_SelectionChanged);

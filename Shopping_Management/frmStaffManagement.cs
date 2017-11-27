@@ -67,7 +67,8 @@ namespace Shopping_Management
                 row.Cells[2].Value = user.sex;
                 row.Cells[3].Value = user.DOB;
                 row.Cells[4].Value = user.phone;
-                row.Cells[5].Value = user.admin;
+                row.Cells[5].Value = user.address;
+                row.Cells[6].Value = user.admin;
                 dgvDetail.Rows.Add(row);
 
                 index++;
@@ -190,6 +191,54 @@ namespace Shopping_Management
         private void txtFullname_TextChanged(object sender, EventArgs e)
         {
             btnAddNewStaff.Enabled = true;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            switch (ValidateForm())
+            {
+                case -1:
+                    MessageBox.Show("Retype password is not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    break;
+                case 0:
+                    MessageBox.Show("User ID requested!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    break;
+                case 1:
+                    MessageBox.Show("Missing some informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    break;
+                case -99:
+                    UserLogin user = new UserLogin(int.Parse(txtUsername.Text), Encryption.sha256(txtNewPass.Text), txtFullname.Text, cbSex.Text, dtpDOB.Value.ToShortDateString(), txtPhone.Text, txtAddress.Text, 0);
+                    if (authentication.UpdateUser(user, false))
+                    {
+                        MessageBox.Show("Insert User Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmStaffManagement_Load(null, null);
+                    }
+                    break;
+            }
+        }
+
+        private void btnDeleteStaff_Click(object sender, EventArgs e)
+        {
+            switch (ValidateForm())
+            {
+                case -1:
+                    MessageBox.Show("Retype password is not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    break;
+                case 0:
+                    MessageBox.Show("User ID requested!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    break;
+                case 1:
+                    MessageBox.Show("Missing some informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    break;
+                case -99:
+                    UserLogin user = new UserLogin(int.Parse(txtUsername.Text), Encryption.sha256(txtNewPass.Text), txtFullname.Text, cbSex.Text, dtpDOB.Value.ToShortDateString(), txtPhone.Text, txtAddress.Text, -1);
+                    if (authentication.UpdateUser(user, false))
+                    {
+                        MessageBox.Show("Insert User Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmStaffManagement_Load(null, null);
+                    }
+                    break;
+            }
         }
     }
 }

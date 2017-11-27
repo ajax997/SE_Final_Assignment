@@ -82,6 +82,7 @@
             // 
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbPassword.Location = new System.Drawing.Point(39, 223);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(67, 19);
@@ -113,6 +114,7 @@
             // 
             this.lbUser.AutoSize = true;
             this.lbUser.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.lbUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbUser.Location = new System.Drawing.Point(39, 180);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(50, 19);

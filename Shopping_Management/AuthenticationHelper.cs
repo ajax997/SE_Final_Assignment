@@ -87,7 +87,8 @@ namespace Shopping_Management
             List<UserLogin> users = new List<UserLogin>();
             foreach (DataRow row in res.Rows)
             {
-                UserLogin user = new UserLogin((int)row["staff_id"], " ", (string)row["name"], (string)row["sex"], (string)row["dob"], (string)row["phone"], (string)row["address"], 0);
+                UserLogin user = new UserLogin((int)row["staff_id"], " ", (string)row["name"], (string)row["sex"], (string)row["dob"], (string)row["phone"], (string)row["address"], 
+                    (int)row["role"]);
                 users.Add(user);
             }
             return users;

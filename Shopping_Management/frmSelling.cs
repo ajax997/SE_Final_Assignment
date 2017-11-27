@@ -463,5 +463,10 @@ namespace Shopping_Management
                 }
             }
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSelling_Load(null, null);
+        }
     }
 }
