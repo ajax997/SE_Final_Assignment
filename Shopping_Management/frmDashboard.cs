@@ -15,14 +15,16 @@ namespace Shopping_Management
     {
         private bool en;
         private string fullname;
+        int permission;
         private int staffID;
-        public frmDashboard(bool en, bool admin, string fullname, int staffID)
+        public frmDashboard(bool en, bool admin, string fullname, int staffID, int permission)
         {
            
             InitializeComponent();
             this.en = en;
             this.fullname = fullname;
             this.staffID = staffID;
+            this.permission = permission;
 
            
 
@@ -61,7 +63,7 @@ namespace Shopping_Management
         {
             lbInfor.Text = Language.GetStringMessage(en,"frmDashBoard_picReport");
             Color c = this.BackColor;
-            picReport.BackColor = Color.FromArgb(Math.Max(c.A - 10, (byte)0), c.R, c.G, c.B);
+            //picReport.BackColor = Color.FromArgb(Math.Max(c.A - 10, (byte)0), c.R, c.G, c.B);
         }
 
         private void picSelling_MouseHover(object sender, EventArgs e)
@@ -103,9 +105,17 @@ namespace Shopping_Management
 
         private void picImport_Click(object sender, EventArgs e)
         {
-            frmImportProducts importProducts = new frmImportProducts(en);
-            importProducts.Show();
-            
+            if (permission != 1)
+            {
+                frmImportProducts importProducts = new frmImportProducts(en);
+                importProducts.Show();
+            }
+            else
+            {
+                MessageBox.Show("You have no privilege to to this action!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+
+
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -117,28 +127,44 @@ namespace Shopping_Management
             
         }
 
-        private void picReport_Click(object sender, EventArgs e)
-        {
-            frmReport report = new frmReport( en);
-            report.Show();
-        }
-
+        
         private void picSetting_Click(object sender, EventArgs e)
         {
-            frmSetting setting = new frmSetting(en);
-            setting.ShowDialog();
+            if (permission != 0)
+            {
+                frmSetting setting = new frmSetting(en);
+                setting.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You have no privilege to to this action!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
         }
 
         private void picStatictis_Click(object sender, EventArgs e)
         {
-            frmHistory frmHistory = new frmHistory(en);
-            frmHistory.Show();
+            if (permission != 0)
+            {
+                frmHistory frmHistory = new frmHistory(en);
+                frmHistory.Show();
+            }
+            else
+            {
+                MessageBox.Show("You have no privilege to to this action!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
         }
 
         private void picStaffManagement_Click(object sender, EventArgs e)
         {
-            frmStaffManagement frmStaff = new frmStaffManagement(en);
-            frmStaff.Show();
+            if (permission != 0)
+            {
+                frmStaffManagement frmStaff = new frmStaffManagement(en);
+                frmStaff.Show();
+            }
+            else
+            {
+                MessageBox.Show("You have no privilege to to this action!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
         }
     }
 }

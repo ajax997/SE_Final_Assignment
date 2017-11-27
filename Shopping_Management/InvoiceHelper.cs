@@ -104,5 +104,33 @@ namespace Shopping_Management
             SqlParameter p3 = new SqlParameter("@productID", productID);
             return manager.executeUpdate(sql, new SqlParameter[] { p1, p2, p3 });
         }
+
+        public List<Invoice> GetAllInvoice()
+        {
+            String sql = "select * from [invoice]";
+            List<Invoice> list = new List<Invoice>();
+            DataTable res = manager.executeQuery(sql);
+            foreach(DataRow row in res.Rows)
+            {
+                Invoice invoice = new Invoice((int)row["invoice_id"], (int)row["staff_id"], (string)row["staff_name"], (int)row["customer_id"]
+                    , (string)row["date"], (string)row["total_price"], (int)row["product_quantity"], (string)row["payment_menthol"]);
+                list.Add(invoice);
+            }
+            return list;
+        }
+        public List<InvoiceItem> GetAllItemFromInvoiceID(int invoiceID)
+        {
+            String sql = "select * from [invoice_item] where invoice_id = @invoice_id";
+            
+            List<InvoiceItem> list = new List<InvoiceItem>();
+            DataTable res = manager.executeQuery(sql, new SqlParameter[] { new SqlParameter("@invoice_id", invoiceID)});
+            foreach(DataRow row in res.Rows)
+            {
+                InvoiceItem item = new InvoiceItem((int)row["invoice_id"], (int)row["product_id"], (string)row["name"], (string)row["unti_type"], (int)row["quantity"], (string)row["price"], (string)row["total"]);
+                list.Add(item);
+            }
+            return list;
+
+        }
     }
 }

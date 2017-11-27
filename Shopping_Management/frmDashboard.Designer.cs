@@ -32,7 +32,6 @@
             this.picImport = new System.Windows.Forms.PictureBox();
             this.picSelling = new System.Windows.Forms.PictureBox();
             this.picStatictis = new System.Windows.Forms.PictureBox();
-            this.picReport = new System.Windows.Forms.PictureBox();
             this.picSetting = new System.Windows.Forms.PictureBox();
             this.lbDashboard = new System.Windows.Forms.Label();
             this.picStaffManagement = new System.Windows.Forms.PictureBox();
@@ -42,7 +41,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSelling)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStatictis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStaffManagement)).BeginInit();
             this.panel1.SuspendLayout();
@@ -53,7 +51,7 @@
             // 
             this.picImport.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.picImport.Image = ((System.Drawing.Image)(resources.GetObject("picImport.Image")));
-            this.picImport.Location = new System.Drawing.Point(111, 119);
+            this.picImport.Location = new System.Drawing.Point(206, 119);
             this.picImport.Name = "picImport";
             this.picImport.Size = new System.Drawing.Size(144, 137);
             this.picImport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,7 +64,7 @@
             // picSelling
             // 
             this.picSelling.Image = ((System.Drawing.Image)(resources.GetObject("picSelling.Image")));
-            this.picSelling.Location = new System.Drawing.Point(336, 119);
+            this.picSelling.Location = new System.Drawing.Point(331, 292);
             this.picSelling.Name = "picSelling";
             this.picSelling.Size = new System.Drawing.Size(146, 137);
             this.picSelling.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,19 +86,6 @@
             this.picStatictis.Click += new System.EventHandler(this.picStatictis_Click);
             this.picStatictis.MouseLeave += new System.EventHandler(this.picStaffManagement_MouseLeave);
             this.picStatictis.MouseHover += new System.EventHandler(this.picStatictis_MouseHover);
-            // 
-            // picReport
-            // 
-            this.picReport.Image = ((System.Drawing.Image)(resources.GetObject("picReport.Image")));
-            this.picReport.Location = new System.Drawing.Point(336, 292);
-            this.picReport.Name = "picReport";
-            this.picReport.Size = new System.Drawing.Size(146, 137);
-            this.picReport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picReport.TabIndex = 0;
-            this.picReport.TabStop = false;
-            this.picReport.Click += new System.EventHandler(this.picReport_Click);
-            this.picReport.MouseLeave += new System.EventHandler(this.picStaffManagement_MouseLeave);
-            this.picReport.MouseHover += new System.EventHandler(this.picReport_MouseHover);
             // 
             // picSetting
             // 
@@ -129,7 +114,7 @@
             // picStaffManagement
             // 
             this.picStaffManagement.Image = ((System.Drawing.Image)(resources.GetObject("picStaffManagement.Image")));
-            this.picStaffManagement.Location = new System.Drawing.Point(555, 119);
+            this.picStaffManagement.Location = new System.Drawing.Point(440, 119);
             this.picStaffManagement.Name = "picStaffManagement";
             this.picStaffManagement.Size = new System.Drawing.Size(146, 137);
             this.picStaffManagement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -183,10 +168,10 @@
             this.Controls.Add(this.picSetting);
             this.Controls.Add(this.picStaffManagement);
             this.Controls.Add(this.picSelling);
-            this.Controls.Add(this.picReport);
             this.Controls.Add(this.picStatictis);
             this.Controls.Add(this.picImport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDashboard";
@@ -199,7 +184,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picImport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSelling)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStatictis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStaffManagement)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -214,7 +198,6 @@
         private System.Windows.Forms.PictureBox picImport;
         private System.Windows.Forms.PictureBox picSelling;
         private System.Windows.Forms.PictureBox picStatictis;
-        private System.Windows.Forms.PictureBox picReport;
         private System.Windows.Forms.PictureBox picSetting;
         private System.Windows.Forms.Label lbDashboard;
         private System.Windows.Forms.PictureBox picStaffManagement;

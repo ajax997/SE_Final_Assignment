@@ -32,9 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaffManagement));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDetail = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAddNewStaff = new System.Windows.Forms.GroupBox();
+            this.cbSex = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lbAddress = new System.Windows.Forms.Label();
@@ -52,14 +61,6 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lbNewPass = new System.Windows.Forms.Label();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbSex = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
             this.gbAddNewStaff.SuspendLayout();
@@ -126,6 +127,36 @@
             this.dgvDetail.TabIndex = 3;
             this.dgvDetail.SizeChanged += new System.EventHandler(this.dgvDetail_SizeChanged);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "User ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Full Name";
+            this.Column2.Name = "Column2";
+            // 
+            // sex
+            // 
+            this.sex.HeaderText = "Sex";
+            this.sex.Name = "sex";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "BOB";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone";
+            this.Column4.Name = "Column4";
+            // 
+            // address
+            // 
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            // 
             // gbAddNewStaff
             // 
             this.gbAddNewStaff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -156,6 +187,27 @@
             this.gbAddNewStaff.TabIndex = 1;
             this.gbAddNewStaff.TabStop = false;
             this.gbAddNewStaff.Text = "New Staff";
+            // 
+            // cbSex
+            // 
+            this.cbSex.FormattingEnabled = true;
+            this.cbSex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbSex.Location = new System.Drawing.Point(27, 277);
+            this.cbSex.Name = "cbSex";
+            this.cbSex.Size = new System.Drawing.Size(248, 28);
+            this.cbSex.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.label1.Location = new System.Drawing.Point(23, 255);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 19);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Sex";
             // 
             // dtpDOB
             // 
@@ -319,62 +371,12 @@
             this.btnDeleteStaff.Text = "Delete";
             this.btnDeleteStaff.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.label1.Location = new System.Drawing.Point(23, 255);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 19);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Sex";
-            // 
-            // cbSex
-            // 
-            this.cbSex.FormattingEnabled = true;
-            this.cbSex.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cbSex.Location = new System.Drawing.Point(27, 277);
-            this.cbSex.Name = "cbSex";
-            this.cbSex.Size = new System.Drawing.Size(248, 28);
-            this.cbSex.TabIndex = 36;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Username";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Full Name";
-            this.Column2.Name = "Column2";
-            // 
-            // sex
-            // 
-            this.sex.HeaderText = "Sex";
-            this.sex.Name = "sex";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "BOB";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Phone";
-            this.Column4.Name = "Column4";
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            // 
             // frmStaffManagement
             // 
             this.ClientSize = new System.Drawing.Size(1038, 658);
             this.Controls.Add(this.gbAddNewStaff);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStaffManagement";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStaffManagement_FormClosing);
             this.Load += new System.EventHandler(this.frmStaffManagement_Load);
@@ -408,13 +410,13 @@
         private System.Windows.Forms.Label lbPhone;
         private System.Windows.Forms.Label lbDOB;
         private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.ComboBox cbSex;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn sex;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.ComboBox cbSex;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -28,28 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSetting));
             this.gpAppInfo = new System.Windows.Forms.GroupBox();
-            this.gpSetting = new System.Windows.Forms.GroupBox();
-            this.lbBussinessName = new System.Windows.Forms.Label();
-            this.txtBussinessName = new System.Windows.Forms.TextBox();
-            this.txtTaxcode = new System.Windows.Forms.TextBox();
-            this.lbTaxCode = new System.Windows.Forms.Label();
-            this.lbLanguage = new System.Windows.Forms.Label();
-            this.lbVersion = new System.Windows.Forms.Label();
             this.lbCredit = new System.Windows.Forms.Label();
-            this.cbLang = new System.Windows.Forms.ComboBox();
+            this.lbVersion = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
             this.gbAdminInfo = new System.Windows.Forms.GroupBox();
+            this.txtFullname = new System.Windows.Forms.TextBox();
+            this.lbAdminFullName = new System.Windows.Forms.Label();
+            this.txtRetypePass = new System.Windows.Forms.TextBox();
             this.lbAdminRetypePass = new System.Windows.Forms.Label();
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.lbAdminNewPass = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.lbAdminUsername = new System.Windows.Forms.Label();
-            this.txtRetypePass = new System.Windows.Forms.TextBox();
-            this.txtFullname = new System.Windows.Forms.TextBox();
-            this.lbAdminFullName = new System.Windows.Forms.Label();
             this.gpAppInfo.SuspendLayout();
-            this.gpSetting.SuspendLayout();
             this.gbAdminInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,72 +58,6 @@
             this.gpAppInfo.TabStop = false;
             this.gpAppInfo.Text = "Application Info";
             // 
-            // gpSetting
-            // 
-            this.gpSetting.Controls.Add(this.cbLang);
-            this.gpSetting.Controls.Add(this.lbLanguage);
-            this.gpSetting.Controls.Add(this.txtTaxcode);
-            this.gpSetting.Controls.Add(this.lbTaxCode);
-            this.gpSetting.Controls.Add(this.txtBussinessName);
-            this.gpSetting.Controls.Add(this.lbBussinessName);
-            this.gpSetting.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.gpSetting.Location = new System.Drawing.Point(12, 137);
-            this.gpSetting.Name = "gpSetting";
-            this.gpSetting.Size = new System.Drawing.Size(376, 161);
-            this.gpSetting.TabIndex = 1;
-            this.gpSetting.TabStop = false;
-            this.gpSetting.Text = "System References";
-            // 
-            // lbBussinessName
-            // 
-            this.lbBussinessName.AutoSize = true;
-            this.lbBussinessName.Location = new System.Drawing.Point(16, 36);
-            this.lbBussinessName.Name = "lbBussinessName";
-            this.lbBussinessName.Size = new System.Drawing.Size(102, 17);
-            this.lbBussinessName.TabIndex = 0;
-            this.lbBussinessName.Text = "Bussiness Name";
-            // 
-            // txtBussinessName
-            // 
-            this.txtBussinessName.Location = new System.Drawing.Point(155, 33);
-            this.txtBussinessName.Name = "txtBussinessName";
-            this.txtBussinessName.Size = new System.Drawing.Size(201, 24);
-            this.txtBussinessName.TabIndex = 1;
-            // 
-            // txtTaxcode
-            // 
-            this.txtTaxcode.Location = new System.Drawing.Point(155, 70);
-            this.txtTaxcode.Name = "txtTaxcode";
-            this.txtTaxcode.Size = new System.Drawing.Size(201, 24);
-            this.txtTaxcode.TabIndex = 3;
-            // 
-            // lbTaxCode
-            // 
-            this.lbTaxCode.AutoSize = true;
-            this.lbTaxCode.Location = new System.Drawing.Point(16, 73);
-            this.lbTaxCode.Name = "lbTaxCode";
-            this.lbTaxCode.Size = new System.Drawing.Size(131, 17);
-            this.lbTaxCode.TabIndex = 2;
-            this.lbTaxCode.Text = "Bussiness\'s Tax Code";
-            // 
-            // lbLanguage
-            // 
-            this.lbLanguage.AutoSize = true;
-            this.lbLanguage.Location = new System.Drawing.Point(16, 112);
-            this.lbLanguage.Name = "lbLanguage";
-            this.lbLanguage.Size = new System.Drawing.Size(65, 17);
-            this.lbLanguage.TabIndex = 4;
-            this.lbLanguage.Text = "Language";
-            // 
-            // lbVersion
-            // 
-            this.lbVersion.AutoSize = true;
-            this.lbVersion.Location = new System.Drawing.Point(16, 35);
-            this.lbVersion.Name = "lbVersion";
-            this.lbVersion.Size = new System.Drawing.Size(76, 17);
-            this.lbVersion.TabIndex = 6;
-            this.lbVersion.Text = "Version: 1.0";
-            // 
             // lbCredit
             // 
             this.lbCredit.AutoSize = true;
@@ -141,18 +68,19 @@
             this.lbCredit.Text = "Credit: This Application is a SE\'s Assignment,\r\nProgrammed by Nguyen Phuc Nghi, T" +
     "ruong Tuan Phat";
             // 
-            // cbLang
+            // lbVersion
             // 
-            this.cbLang.FormattingEnabled = true;
-            this.cbLang.Location = new System.Drawing.Point(156, 107);
-            this.cbLang.Name = "cbLang";
-            this.cbLang.Size = new System.Drawing.Size(200, 23);
-            this.cbLang.TabIndex = 5;
+            this.lbVersion.AutoSize = true;
+            this.lbVersion.Location = new System.Drawing.Point(16, 35);
+            this.lbVersion.Name = "lbVersion";
+            this.lbVersion.Size = new System.Drawing.Size(76, 17);
+            this.lbVersion.TabIndex = 6;
+            this.lbVersion.Text = "Version: 1.0";
             // 
             // btnApply
             // 
             this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.btnApply.Location = new System.Drawing.Point(293, 518);
+            this.btnApply.Location = new System.Drawing.Point(293, 363);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(95, 32);
             this.btnApply.TabIndex = 2;
@@ -170,12 +98,36 @@
             this.gbAdminInfo.Controls.Add(this.txtusername);
             this.gbAdminInfo.Controls.Add(this.lbAdminUsername);
             this.gbAdminInfo.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.gbAdminInfo.Location = new System.Drawing.Point(12, 313);
+            this.gbAdminInfo.Location = new System.Drawing.Point(12, 140);
             this.gbAdminInfo.Name = "gbAdminInfo";
             this.gbAdminInfo.Size = new System.Drawing.Size(376, 199);
             this.gbAdminInfo.TabIndex = 6;
             this.gbAdminInfo.TabStop = false;
             this.gbAdminInfo.Text = "System References";
+            // 
+            // txtFullname
+            // 
+            this.txtFullname.Location = new System.Drawing.Point(156, 77);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.Size = new System.Drawing.Size(201, 24);
+            this.txtFullname.TabIndex = 7;
+            // 
+            // lbAdminFullName
+            // 
+            this.lbAdminFullName.AutoSize = true;
+            this.lbAdminFullName.Location = new System.Drawing.Point(17, 80);
+            this.lbAdminFullName.Name = "lbAdminFullName";
+            this.lbAdminFullName.Size = new System.Drawing.Size(66, 17);
+            this.lbAdminFullName.TabIndex = 6;
+            this.lbAdminFullName.Text = "Full Name";
+            // 
+            // txtRetypePass
+            // 
+            this.txtRetypePass.Location = new System.Drawing.Point(155, 156);
+            this.txtRetypePass.Name = "txtRetypePass";
+            this.txtRetypePass.Size = new System.Drawing.Size(201, 24);
+            this.txtRetypePass.TabIndex = 5;
+            this.txtRetypePass.UseSystemPasswordChar = true;
             // 
             // lbAdminRetypePass
             // 
@@ -219,40 +171,16 @@
             this.lbAdminUsername.TabIndex = 0;
             this.lbAdminUsername.Text = "Admin Username";
             // 
-            // txtRetypePass
-            // 
-            this.txtRetypePass.Location = new System.Drawing.Point(155, 156);
-            this.txtRetypePass.Name = "txtRetypePass";
-            this.txtRetypePass.Size = new System.Drawing.Size(201, 24);
-            this.txtRetypePass.TabIndex = 5;
-            this.txtRetypePass.UseSystemPasswordChar = true;
-            // 
-            // txtFullname
-            // 
-            this.txtFullname.Location = new System.Drawing.Point(156, 77);
-            this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Size = new System.Drawing.Size(201, 24);
-            this.txtFullname.TabIndex = 7;
-            // 
-            // lbAdminFullName
-            // 
-            this.lbAdminFullName.AutoSize = true;
-            this.lbAdminFullName.Location = new System.Drawing.Point(17, 80);
-            this.lbAdminFullName.Name = "lbAdminFullName";
-            this.lbAdminFullName.Size = new System.Drawing.Size(66, 17);
-            this.lbAdminFullName.TabIndex = 6;
-            this.lbAdminFullName.Text = "Full Name";
-            // 
             // frmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 562);
+            this.ClientSize = new System.Drawing.Size(400, 412);
             this.Controls.Add(this.gbAdminInfo);
             this.Controls.Add(this.btnApply);
-            this.Controls.Add(this.gpSetting);
             this.Controls.Add(this.gpAppInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSetting";
@@ -260,8 +188,6 @@
             this.Load += new System.EventHandler(this.frmSetting_Load);
             this.gpAppInfo.ResumeLayout(false);
             this.gpAppInfo.PerformLayout();
-            this.gpSetting.ResumeLayout(false);
-            this.gpSetting.PerformLayout();
             this.gbAdminInfo.ResumeLayout(false);
             this.gbAdminInfo.PerformLayout();
             this.ResumeLayout(false);
@@ -271,15 +197,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gpAppInfo;
-        private System.Windows.Forms.GroupBox gpSetting;
         private System.Windows.Forms.Label lbCredit;
         private System.Windows.Forms.Label lbVersion;
-        private System.Windows.Forms.ComboBox cbLang;
-        private System.Windows.Forms.Label lbLanguage;
-        private System.Windows.Forms.TextBox txtTaxcode;
-        private System.Windows.Forms.Label lbTaxCode;
-        private System.Windows.Forms.TextBox txtBussinessName;
-        private System.Windows.Forms.Label lbBussinessName;
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.GroupBox gbAdminInfo;
         private System.Windows.Forms.TextBox txtFullname;

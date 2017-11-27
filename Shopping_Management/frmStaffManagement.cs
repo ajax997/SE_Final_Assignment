@@ -49,7 +49,27 @@ namespace Shopping_Management
 
         private void frmStaffManagement_Load(object sender, EventArgs e)
         {
+
             this.Height += 1;
+            dgvDetail.Rows.Clear();
+            List<UserLogin> list = authentication.GetAllStaff();
+            int index = 0;
+
+            foreach(UserLogin user in list)
+            {
+                DataGridViewRow row = (DataGridViewRow)dgvDetail.Rows[index].Clone();
+                row.Cells[0].Value = user.staff_id;
+                row.Cells[1].Value = user.fullname;
+                row.Cells[2].Value = user.sex;
+                row.Cells[3].Value = user.DOB;
+                row.Cells[4].Value = user.phone;
+                row.Cells[5].Value = user.admin;
+                dgvDetail.Rows.Add(row);
+
+                index++;
+            }
+
+
         }
 
         private void btnAddNewStaff_Click(object sender, EventArgs e)

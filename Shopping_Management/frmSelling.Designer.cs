@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelling));
             this.pnInfo = new System.Windows.Forms.Panel();
             this.gpPayment = new System.Windows.Forms.GroupBox();
             this.txtExtraMoney = new System.Windows.Forms.TextBox();
@@ -689,6 +690,7 @@
             this.Controls.Add(this.pnSummary);
             this.Controls.Add(this.pnInfo);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmSelling";
             this.Text = "frmSelling";

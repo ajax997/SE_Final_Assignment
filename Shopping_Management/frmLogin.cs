@@ -94,17 +94,24 @@ namespace Shopping_Management
                 {
                     if (user.admin == 1)
                     {
-                        frmDashboard frm = new frmDashboard(_en, true, user.fullname, user.staff_id);
+                        frmDashboard frm = new frmDashboard(_en, true, user.fullname, user.staff_id, user.admin);
                         frm.Show();
                         DialogResult = DialogResult.OK;
                         this.Dispose();
                     }
                     else
                     {
-                        frmDashboard frm = new frmDashboard(_en, false, user.fullname, user.staff_id);
-                        frm.Show();
-                        DialogResult = DialogResult.OK;
-                        this.Dispose();
+                        if (user.admin == -1)
+                        {
+                                
+                        }
+                        else
+                        {
+                            frmDashboard frm = new frmDashboard(_en, false, user.fullname, user.staff_id, user.admin);
+                            frm.Show();
+                            DialogResult = DialogResult.OK;
+                            this.Dispose();
+                        }
                     }
                 }
             }

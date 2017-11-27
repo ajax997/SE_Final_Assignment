@@ -58,6 +58,20 @@ namespace Shopping_Management
                 throw e;
             }
         }
+
+        public List<UserLogin> GetAllStaff()
+        {
+            String sql = "select * from [staff] where role != 1";
+            DataTable res = manager.executeQuery(sql);
+            List<UserLogin> users = new List<UserLogin>();
+            foreach(DataRow row in res.Rows)
+            {
+                UserLogin user = new UserLogin((int)row["staff_id"], " ", (string)row["name"], (int)row["sex"], (string)row["dob"], (string)row["phone"], (string)row["address"], 0);
+                users.Add(user);
+            }
+            return users;
+
+        }
         public void Close()
         {
             manager.close();
