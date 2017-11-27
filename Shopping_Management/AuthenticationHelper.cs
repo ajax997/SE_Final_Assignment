@@ -18,7 +18,7 @@ namespace Shopping_Management
             manager.open();
         }
 
-        public UserLogin CheckLogin(int id, string pass)
+       public UserLogin CheckLogin(int id, string pass)
         {
             String sql = @"select * from [staff] where staff_id = @id and password = @pass";
             SqlParameter p1 = new SqlParameter("@id", id);
@@ -49,7 +49,7 @@ namespace Shopping_Management
             }
 
         }
-        public bool InsertUser(UserLogin user)
+       public  bool InsertUser(UserLogin user)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace Shopping_Management
             }
         }
 
-        public List<UserLogin> GetAllStaff(bool admin)
+      public   List<UserLogin> GetAllStaff(bool admin)
         {
             String sql;
 
@@ -95,7 +95,7 @@ namespace Shopping_Management
 
         }
 
-        public bool UpdateUser(UserLogin user, bool admin)
+       public  bool UpdateUser(UserLogin user, bool admin)
         {
             String sql;
             if (admin)

@@ -19,7 +19,7 @@ namespace Shopping_Management
             InitializeComponent();
         }
 
-        private void frmSetting_Load(object sender, EventArgs e)
+        public void frmSetting_Load(object sender, EventArgs e)
         {
              user = authentication.GetAllStaff(true);
             foreach(UserLogin u in user )
